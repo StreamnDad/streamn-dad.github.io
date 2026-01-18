@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OAuth Callback</title>
+    <style>
+      :root {
+        --ink: #14231a;
+        --forest: #1c4b2f;
+        --evergreen: #2f6b44;
+        --ice: #f4f7f5;
+        --sand: #e9efe9;
+        --warning: #b5532a;
+        --success: #1f6b4a;
+        --shadow: 0 18px 32px rgba(12, 26, 18, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0%, #eef4ef 50%, #dfeade 100%);
+        color: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 18px;
+      }
+
+      .card {
+        width: min(720px, 100%);
+        background: #fff;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(28, 75, 47, 0.12);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0;
+        color: var(--forest);
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .source {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: var(--sand);
+      }
+
+      .source img {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        border: 1px solid rgba(28, 75, 47, 0.2);
+      }
+
+      .source small {
+        color: #3d4b44;
+      }
+
+      .code-box {
+        border-radius: 14px;
+        border: 1px solid rgba(28, 75, 47, 0.2);
+        background: var(--ice);
+        padding: 16px;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        word-break: break-all;
+        cursor: text;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      button {
+        border: none;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        background: var(--forest);
+        color: #fff;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      button.secondary {
+        background: transparent;
+        color: var(--forest);
+        border: 2px solid var(--forest);
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(12, 26, 18, 0.15);
+      }
+
+      .status {
+        font-size: 13px;
+        color: var(--success);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      .status.visible {
+        opacity: 1;
+      }
+
+      .error {
+        padding: 14px;
+        border-radius: 12px;
+        background: #fff4ef;
+        border: 1px solid rgba(181, 83, 42, 0.3);
+        color: var(--warning);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>OAuth Callback</h1>
+      <p>
+        Authorization successful. Copy the code below and paste it into your local app
+        to exchange for an access token.
+      </p>
+      <section class="source" id="source" hidden>
+        <img id="source-favicon" alt="Source favicon" />
+        <div>
+          <div id="source-label"></div>
+          <small id="source-origin"></small>
+        </div>
+      </section>
+      <div id="error" class="error" hidden>No OAuth code was found in this URL.</div>
+      <div id="code-section" hidden>
+        <div id="code-box" class="code-box" title="Click to select"></div>
+        <div class="actions">
+          <button id="copy-button" type="button">Copy to Clipboard</button>
+          <button id="clear-button" class="secondary" type="button">Clear saved code</button>
+        </div>
+        <div id="copy-status" class="status">Copied!</div>
+      </div>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      const state = params.get("state");
+
+      const errorEl = document.getElementById("error");
+      const codeSection = document.getElementById("code-section");
+      const codeBox = document.getElementById("code-box");
+      const copyButton = document.getElementById("copy-button");
+      const clearButton = document.getElementById("clear-button");
+      const copyStatus = document.getElementById("copy-status");
+
+      const sourceSection = document.getElementById("source");
+      const sourceFavicon = document.getElementById("source-favicon");
+      const sourceLabel = document.getElementById("source-label");
+      const sourceOrigin = document.getElementById("source-origin");
+
+      const showCopyStatus = () => {
+        copyStatus.classList.add("visible");
+        setTimeout(() => copyStatus.classList.remove("visible"), 1200);
+      };
+
+      const selectCode = () => {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(codeBox);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      };
+
+      const decodeBase64Url = (value) => {
+        const normalized = value.replace(/-/g, "+").replace(/_/g, "/");
+        const padded =
+          normalized + "===".slice((normalized.length + 3) % 4);
+        const decoded = atob(padded);
+        return decodeURIComponent(
+          Array.from(decoded)
+            .map((char) => `%${char.charCodeAt(0).toString(16).padStart(2, "0")}`)
+            .join("")
+        );
+      };
+
+      const parseState = (raw) => {
+        if (!raw) return null;
+        try {
+          return JSON.parse(decodeBase64Url(raw));
+        } catch (error) {
+          return null;
+        }
+      };
+
+      const showSource = (data) => {
+        const origin = data && data.origin;
+        const label = data && data.label;
+        const app = data && data.app;
+        let hostname = "";
+
+        if (origin) {
+          try {
+            hostname = new URL(origin).hostname;
+          } catch (error) {
+            hostname = "";
+          }
+        }
+
+        const displayLabel = label || hostname || app || "Unknown";
+        const displayOrigin = origin || "";
+
+        sourceLabel.textContent = `Source: ${displayLabel}`;
+        sourceOrigin.textContent = displayOrigin ? displayOrigin : "Unknown source";
+
+        if (hostname) {
+          sourceFavicon.src = `https://www.google.com/s2/favicons?domain=${hostname}&sz=64`;
+        } else {
+          sourceFavicon.src = "https://www.google.com/s2/favicons?domain=example.com&sz=64";
+        }
+
+        sourceSection.hidden = false;
+      };
+
+      const stateData = parseState(state);
+      if (state || stateData) {
+        showSource(stateData);
+      }
+
+      if (code) {
+        codeBox.textContent = code;
+        codeSection.hidden = false;
+        localStorage.setItem("oauth_code", code);
+
+        codeBox.addEventListener("click", selectCode);
+        copyButton.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(code);
+            showCopyStatus();
+          } catch (error) {
+            selectCode();
+          }
+        });
+      } else {
+        errorEl.hidden = false;
+      }
+
+      clearButton.addEventListener("click", () => {
+        localStorage.removeItem("oauth_code");
+        showCopyStatus();
+      });
+    </script>
+  </body>
+</html>
