@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Streamn Dad | Live Streaming Youth Hockey</title>
+    <meta
+      name="description"
+      content="Streamn Dad is dedicated to live streaming youth hockey with clarity, care, and community-first storytelling."
+    />
+    <link rel="icon" type="image/jpeg" href="assets/images/streamn-dad-logo-simple-1.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Shippori+Mincho:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #1c4b2f;
+        --evergreen: #2f6b44;
+        --sage: #cfe0c8;
+        --ice: #f4f7f5;
+        --ember: #c89b4b;
+        --ink: #16231c;
+        --glow: rgba(200, 155, 75, 0.24);
+        --shadow: 0 20px 45px rgba(13, 27, 19, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Shippori Mincho", "Times New Roman", serif;
+        background: radial-gradient(circle at top, #ffffff 0%, #eef3ef 30%, #dfe9df 60%, #cfdccd 100%);
+        color: var(--ink);
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        padding: 32px clamp(20px, 4vw, 56px) 64px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand img {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        border: 2px solid var(--evergreen);
+        box-shadow: 0 10px 24px rgba(14, 31, 21, 0.2);
+        background: #fff;
+        object-fit: cover;
+      }
+
+      .brand h1 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: clamp(20px, 3vw, 28px);
+        color: var(--forest);
+      }
+
+      nav {
+        display: flex;
+        gap: 24px;
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        position: relative;
+        padding-bottom: 4px;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--ember);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: -30px -30px 20px;
+        background: linear-gradient(120deg, rgba(31, 78, 52, 0.15), rgba(255, 255, 255, 0));
+        border-radius: 40px;
+        z-index: -1;
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .hero h2 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        font-size: clamp(36px, 6vw, 64px);
+        line-height: 1.05;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--forest);
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #2e3c32;
+      }
+
+      .cta {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 14px;
+        border: 2px solid transparent;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button.primary {
+        background: var(--forest);
+        color: #fff;
+        box-shadow: 0 14px 30px rgba(22, 35, 28, 0.25);
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: var(--forest);
+        color: var(--forest);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card {
+        background: #fff;
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, var(--glow), transparent 55%);
+        opacity: 0.9;
+      }
+
+      .hero-card img {
+        width: 100%;
+        max-width: 360px;
+        display: block;
+        margin: 0 auto 16px;
+        filter: drop-shadow(0 10px 22px rgba(22, 35, 28, 0.22));
+        border-radius: 24px;
+      }
+
+      .hero-card .card-text {
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #2c3b32;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+      }
+
+      .stat {
+        background: rgba(255, 255, 255, 0.82);
+        border-radius: 20px;
+        padding: 18px 20px;
+        box-shadow: 0 16px 30px rgba(14, 31, 21, 0.12);
+        border: 1px solid rgba(47, 107, 68, 0.15);
+      }
+
+      .stat h3 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        font-size: 26px;
+        color: var(--evergreen);
+        letter-spacing: 0.08em;
+      }
+
+      .stat p {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #435347;
+      }
+
+      .sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .panel {
+        background: #fdfefd;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 14px 26px rgba(14, 31, 21, 0.12);
+        border: 1px solid rgba(28, 75, 47, 0.15);
+      }
+
+      .panel h3 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        color: var(--forest);
+      }
+
+      .panel p {
+        line-height: 1.65;
+        color: #2e3c32;
+      }
+
+      .panel ul {
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .panel li {
+        padding-left: 16px;
+        position: relative;
+        font-size: 15px;
+      }
+
+      .panel li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--ember);
+      }
+
+      .cta-banner {
+        background: linear-gradient(130deg, var(--forest), var(--evergreen));
+        border-radius: 30px;
+        padding: 32px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        box-shadow: 0 24px 40px rgba(16, 30, 22, 0.25);
+      }
+
+      .cta-banner h3 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 24px;
+      }
+
+      .cta-banner p {
+        max-width: 540px;
+        line-height: 1.7;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        color: #344339;
+        padding-top: 12px;
+        border-top: 1px solid rgba(22, 35, 28, 0.1);
+      }
+
+      .tagline {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--evergreen);
+      }
+
+      .animate-in {
+        animation: rise 0.9s ease both;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 720px) {
+        nav {
+          display: none;
+        }
+
+        header {
+          justify-content: center;
+        }
+
+        .page {
+          padding: 24px 18px 48px;
+        }
+
+        .hero {
+          gap: 20px;
+        }
+
+        .cta-banner {
+          align-items: stretch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="animate-in">
+        <div class="brand">
+          <img src="assets/images/streamn-dad-logo-simple-1.jpg" alt="Streamn Dad logo" />
+          <h1>Streamn Dad</h1>
+        </div>
+        <nav>
+          <a href="#mission">Mission</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#contact">Connect</a>
+        </nav>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy animate-in">
+          <p class="tagline">Live • Stream • Youth Hockey</p>
+          <h2 id="hero-title">Every shift. Every goal. Every family.</h2>
+          <p>
+            Streamn Dad is the live-streaming home for youth hockey. We capture the
+            moments that matter with clear audio, smooth motion, and a community-first
+            approach for teams, families, and fans.
+          </p>
+          <div class="cta">
+            <a class="button primary" href="mailto:hello@streamn.dad">Book a stream</a>
+            <a class="button secondary" href="#coverage">See coverage</a>
+          </div>
+        </div>
+        <div class="hero-card animate-in">
+          <img src="assets/images/streamn-dad-logo-1.jpg" alt="Streamn Dad badge logo" />
+          <p class="card-text">
+            Built by rink-side parents and storytellers. We bring a broadcast feel to
+            youth games with multiple angles, real-time updates, and highlight-ready
+            clips for your team.
+          </p>
+        </div>
+      </section>
+
+      <section class="stats animate-in" id="mission">
+        <div class="stat">
+          <h3>HD+</h3>
+          <p>Clean, stable video</p>
+        </div>
+        <div class="stat">
+          <h3>Live</h3>
+          <p>Instant family access</p>
+        </div>
+        <div class="stat">
+          <h3>Replay</h3>
+          <p>Shareable highlights</p>
+        </div>
+      </section>
+
+      <section class="sections" id="coverage">
+        <article class="panel animate-in">
+          <h3>Coverage</h3>
+          <p>
+            From early-morning practices to tournament weekends, Streamn Dad delivers
+            consistent production with flexible packages for clubs and associations.
+          </p>
+          <ul>
+            <li>Single-game live streams</li>
+            <li>Season coverage plans</li>
+            <li>Highlight reels + recap edits</li>
+          </ul>
+        </article>
+        <article class="panel animate-in">
+          <h3>Production</h3>
+          <p>
+            We blend modern streaming tools with a broadcast-minded eye to keep the
+            action tight and the story clear.
+          </p>
+          <ul>
+            <li>Rink-side audio capture</li>
+            <li>Real-time score overlays</li>
+            <li>Branded graphics</li>
+          </ul>
+        </article>
+        <article class="panel animate-in">
+          <h3>Community</h3>
+          <p>
+            Your athletes deserve to be seen. We keep the focus on the players,
+            families, and community that make youth hockey special.
+          </p>
+          <ul>
+            <li>Family-friendly delivery</li>
+            <li>Fast share links</li>
+            <li>Custom highlight packs</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cta-banner animate-in" id="contact">
+        <h3>Ready to bring Streamn Dad to your rink?</h3>
+        <p>
+          We’re scheduling upcoming seasons now. Reach out and we’ll build a coverage
+          plan that matches your club’s needs.
+        </p>
+        <a class="button secondary" href="mailto:hello@streamn.dad">Contact us</a>
+      </section>
+
+      <footer>
+        <span class="tagline">Streamn Dad • Minnesota</span>
+        <span>© 2024 Streamn Dad. All rights reserved.</span>
+      </footer>
+    </div>
+  </body>
+</html>
