@@ -331,9 +331,27 @@
 
       .socials {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
         width: 100%;
+      }
+
+      .social-column {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .social-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-icon {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
       }
 
       .social-card {
@@ -362,6 +380,40 @@
       }
 
       .social-card a {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 12px;
+        color: var(--forest);
+      }
+
+      .youtube-embed {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 0;
+        border-radius: 14px;
+        box-shadow: 0 14px 26px rgba(14, 31, 21, 0.15);
+      }
+
+      .youtube-list {
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        margin-top: 6px;
+      }
+
+      .youtube-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(28, 75, 47, 0.1);
+      }
+
+      .youtube-list span {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.12em;
@@ -421,6 +473,19 @@
 
         .cta-banner {
           align-items: stretch;
+        }
+
+        .socials {
+          grid-template-columns: 1fr;
+        }
+
+        .social-card {
+          padding: 16px;
+        }
+
+        .youtube-list li {
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
     </style>
@@ -523,40 +588,116 @@
           channels.
         </p>
         <div class="socials">
-          <div class="social-card">
-            <span>YouTube</span>
-            <p>Streamn Dad live streams + highlights.</p>
-            <a href="https://www.youtube.com/@streamn-dad">Visit channel</a>
+          <div class="social-column">
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#ff0033"
+                    d="M23.5 6.4a3 3 0 0 0-2.1-2.2C19.6 3.7 12 3.7 12 3.7s-7.6 0-9.4.5a3 3 0 0 0-2.1 2.2A31 31 0 0 0 0 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.2c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.2A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.6Z"
+                  />
+                  <path fill="#fff" d="M9.7 15.5 15.9 12 9.7 8.5v7Z" />
+                </svg>
+                <span>YouTube live</span>
+              </div>
+              <p>Streamn Dad livestreams, highlights, shorts, and playlists.</p>
+              <iframe
+                class="youtube-embed"
+                src="https://www.youtube.com/embed/live_stream?channel=UCH_6V-9Hcy6BJ-_junYtXWg"
+                title="Streamn Dad live"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <ul class="youtube-list">
+                <li>
+                  <span>Streamn Dad</span>
+                  <a href="https://www.youtube.com/@streamn-dad">Visit channel</a>
+                </li>
+                <li>
+                  <span>Roseville Youth Hockey</span>
+                  <a href="https://www.youtube.com/@rosevilleareayouthhockey">Visit channel</a>
+                </li>
+                <li>
+                  <span>2016 MN Blades</span>
+                  <a href="https://www.youtube.com/@2016MNBlades">Visit channel</a>
+                </li>
+                <li>
+                  <span>2014 MN Machine Orange</span>
+                  <a href="https://www.youtube.com/@2014MinnesotaMachineOrange">Visit channel</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="social-card">
-            <span>YouTube</span>
-            <p>Roseville Area Youth Hockey coverage.</p>
-            <a href="https://www.youtube.com/@rosevilleareayouthhockey">Visit channel</a>
-          </div>
-          <div class="social-card">
-            <span>Instagram</span>
-            <p>Quick clips and rink-side stories.</p>
-            <a href="https://www.instagram.com/streamn_dad/">Follow</a>
-          </div>
-          <div class="social-card">
-            <span>Threads</span>
-            <p>Thoughts, experiments, and updates.</p>
-            <a href="https://www.threads.com/@streamn_dad">Follow</a>
-          </div>
-          <div class="social-card">
-            <span>Facebook</span>
-            <p>Highlights and community posts.</p>
-            <a href="https://www.facebook.com/profile.php?id=61580228967227">Follow</a>
-          </div>
-          <div class="social-card">
-            <span>X</span>
-            <p>Live notes and tech tweaks.</p>
-            <a href="https://x.com/streamn_dad">Follow</a>
-          </div>
-          <div class="social-card">
-            <span>LinkedIn</span>
-            <p>Professional updates and tech work.</p>
-            <a href="https://www.linkedin.com/in/jremitz/">Connect</a>
+          <div class="social-column">
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#e1306c"
+                    d="M7.5 3.5h9A4 4 0 0 1 20.5 7.5v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4Z"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M12 7.8a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4Zm0 6.9a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Zm5.1-6.7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                  />
+                </svg>
+                <span>Instagram</span>
+              </div>
+              <p>Game highlights in reels and stories of schedules.</p>
+              <a href="https://www.instagram.com/streamn_dad/">Follow</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#1877f2"
+                    d="M12 2.3a9.7 9.7 0 0 0-1.5 19.3v-6.8H8.1V12h2.4V9.9c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.4V12h2.5l-.4 2.8h-2.1v6.8A9.7 9.7 0 0 0 12 2.3Z"
+                  />
+                </svg>
+                <span>Facebook</span>
+              </div>
+              <p>Game highlights in reels and stories of schedules.</p>
+              <a href="https://www.facebook.com/profile.php?id=61580228967227">Follow</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#101010"
+                    d="M12 2.5c-4.7 0-8.5 3.8-8.5 8.5S7.3 19.5 12 19.5c3.6 0 6.6-2.2 7.9-5.3.5-1.2.7-2.5.6-3.9-.2-2.7-1.3-4.5-3.4-5.6-1.4-.7-3.1-1-5.1-1-.5 0-1 0-1.5.1v2c.5-.1 1-.1 1.5-.1 1.6 0 2.9.3 3.9.8 1.2.6 1.9 1.6 2.1 2.9-1-.6-2.3-.9-3.7-1-2.7-.2-4.5.6-5.5 2.4-.6 1.1-.7 2.5-.3 3.7.6 1.8 2.2 2.8 4.4 2.8 2.6 0 4.6-1.5 5.3-4 .2-.7.3-1.5.2-2.3.7.8 1 1.9 1.1 3.2.1 1.1-.1 2.2-.5 3.1-1 2.4-3.3 4-6 4-3.6 0-6.5-2.9-6.5-6.5S8.4 4.5 12 4.5c2.8 0 5.2 1.7 6.2 4.2l1.8-.7C18.7 4.7 15.6 2.5 12 2.5Zm.3 13c-1.4 0-2.4-.5-2.8-1.6-.3-.8-.2-1.6.2-2.3.6-1.1 1.7-1.5 3.2-1.4 1.4.1 2.5.5 3.3 1.1 0 .6-.1 1.2-.2 1.6-.5 1.6-1.8 2.6-3.7 2.6Z"
+                  />
+                </svg>
+                <span>Threads</span>
+              </div>
+              <p>Live game updates including highlights of the action.</p>
+              <a href="https://www.threads.com/@streamn_dad">Follow</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0f1419"
+                    d="M18.2 2H21l-6.1 7.1 7.2 12h-5.2l-4.1-7-6 7H4l6.6-7.7L3.8 2H9l3.7 6.2L18.2 2Z"
+                  />
+                </svg>
+                <span>X</span>
+              </div>
+              <p>Live game updates including highlights of the action.</p>
+              <a href="https://x.com/streamn_dad">Follow</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0a66c2"
+                    d="M6.9 9.4H3.8V20h3.1V9.4Zm-1.6-5A1.8 1.8 0 1 0 5.4 8a1.8 1.8 0 0 0-.1-3.6ZM20.2 13.7c0-3.4-1.8-5-4.2-5a3.6 3.6 0 0 0-3.2 1.8V9.4H9.8V20h3.1v-5.5c0-1.5.3-3 2.2-3 1.9 0 1.9 1.8 1.9 3.1V20h3.1v-6.3Z"
+                  />
+                </svg>
+                <span>LinkedIn</span>
+              </div>
+              <p>My information and professional work.</p>
+              <a href="https://www.linkedin.com/in/jremitz/">Connect</a>
+            </div>
           </div>
         </div>
       </section>
