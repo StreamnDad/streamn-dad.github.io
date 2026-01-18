@@ -294,6 +294,23 @@
         font-size: 15px;
       }
 
+      .about-icons {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin: 14px 0 6px;
+      }
+
+      .about-icons img {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        object-fit: cover;
+        border: 2px solid rgba(28, 75, 47, 0.2);
+        box-shadow: 0 10px 20px rgba(14, 31, 21, 0.18);
+        background: #fff;
+      }
+
       .panel li::before {
         content: "";
         position: absolute;
@@ -393,6 +410,11 @@
         border: 0;
         border-radius: 14px;
         box-shadow: 0 14px 26px rgba(14, 31, 21, 0.15);
+      }
+
+      .youtube-note {
+        font-size: 13px;
+        color: #3b4b41;
       }
 
       .youtube-list {
@@ -573,6 +595,10 @@
             I'm Jake Remitz — a passionate technologist, hockey dad, and tinkerer
             who loves pushing gear and software to their limits.
           </p>
+          <div class="about-icons">
+            <img src="assets/images/streamn_dad.jpg" alt="Streamn Dad icon" />
+            <img src="assets/images/streamn_dad2.PNG" alt="Streamn Dad alternate icon" />
+          </div>
           <ul>
             <li>Experimenting with overlays</li>
             <li>Finding new share workflows</li>
@@ -603,11 +629,15 @@
               <p>Streamn Dad livestreams, highlights, shorts, and playlists.</p>
               <iframe
                 class="youtube-embed"
-                src="https://www.youtube.com/embed/live_stream?channel=UCH_6V-9Hcy6BJ-_junYtXWg"
-                title="Streamn Dad live"
+                src="https://www.youtube.com/embed?listType=playlist&list=UUH_6V-9Hcy6BJ-_junYtXWg"
+                title="Streamn Dad latest uploads"
                 allowfullscreen
                 loading="lazy"
               ></iframe>
+              <p class="youtube-note">
+                Live games appear here when active. Otherwise, you will see the
+                latest uploads.
+              </p>
               <ul class="youtube-list">
                 <li>
                   <span>Streamn Dad</span>
