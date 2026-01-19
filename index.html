@@ -369,6 +369,45 @@
         font-weight: 600;
       }
 
+      .guide-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+
+      .guide-card {
+        background: #fdfefd;
+        border-radius: 20px;
+        padding: 18px 20px;
+        border: 1px solid rgba(28, 75, 47, 0.15);
+        box-shadow: 0 12px 24px rgba(14, 31, 21, 0.12);
+        display: grid;
+        gap: 10px;
+      }
+
+      .guide-card h4 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--forest);
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .guide-card p {
+        margin: 0;
+        color: #2e3c32;
+        line-height: 1.6;
+      }
+
+      .guide-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: linear-gradient(140deg, rgba(31, 78, 52, 0.16), rgba(200, 155, 75, 0.18));
+        border: 1px solid rgba(28, 75, 47, 0.2);
+      }
+
       .panel .stats {
         margin-top: 18px;
       }
@@ -585,6 +624,7 @@
         <nav>
           <a href="#mission">Mission</a>
           <a href="#what">About</a>
+          <a href="#guides">Guides</a>
           <a href="#socials">Watch</a>
         </nav>
       </header>
@@ -630,6 +670,11 @@
       <section class="panel animate-in" id="impact">
         <h3>YouTube impact</h3>
         <p>Across my channels (Jan 18, 2025 – Jan 18, 2026).</p>
+        <p>
+          If you are aiming to be an influencer, these numbers are not staggering. But for a
+          hobby project serving local teams, they show you can build meaningful reach and keep
+          families connected.
+        </p>
         <div class="stats">
           <div class="stat">
             <h3>2.33M</h3>
@@ -692,6 +737,53 @@
             <li>Building community visibility</li>
           </ul>
         </article>
+      </section>
+
+      <section class="panel animate-in" id="guides">
+        <h3>Guides & stories</h3>
+        <p>Short reads that break down why I stream, how to start, and the tools behind it.</p>
+        <div class="guide-grid">
+          <a class="guide-card" href="story.html">
+            <div class="guide-icon"></div>
+            <h4>My Story</h4>
+            <p>How I got started and why this stays a passion project.</p>
+          </a>
+          <a class="guide-card" href="why-livestreaming.html">
+            <div class="guide-icon"></div>
+            <h4>Why Livestreaming</h4>
+            <p>The heart behind sharing games and moments.</p>
+          </a>
+          <a class="guide-card" href="benefits.html">
+            <div class="guide-icon"></div>
+            <h4>Benefits</h4>
+            <p>What families, teams, and communities gain.</p>
+          </a>
+          <a class="guide-card" href="getting-started.html">
+            <div class="guide-icon"></div>
+            <h4>Getting Started</h4>
+            <p>A beginner-friendly path from idea to first stream.</p>
+          </a>
+          <a class="guide-card" href="service-vs-diy.html">
+            <div class="guide-icon"></div>
+            <h4>Service vs DIY</h4>
+            <p>Choosing between a streaming platform or building your own.</p>
+          </a>
+          <a class="guide-card" href="gear-basics.html">
+            <div class="guide-icon"></div>
+            <h4>Gear Basics</h4>
+            <p>Practical setup ideas that stay lightweight.</p>
+          </a>
+          <a class="guide-card" href="production-overlays.html">
+            <div class="guide-icon"></div>
+            <h4>Production & Overlays</h4>
+            <p>Adding scoreboards, graphics, and polish.</p>
+          </a>
+          <a class="guide-card" href="workflow-sharing.html">
+            <div class="guide-icon"></div>
+            <h4>Workflow & Sharing</h4>
+            <p>Clips, highlights, and getting them out fast.</p>
+          </a>
+        </div>
       </section>
 
       <section class="cta-banner animate-in" id="socials">
