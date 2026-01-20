@@ -11,6 +11,7 @@ This is a static site with no build pipeline.
   - `python3 -m http.server` then open `http://localhost:8000`.
 - Direct editing: open `index.html` in a browser and refresh after changes.
 - When adding or removing pages, update `sitemap.xml` and keep `robots.txt` pointing to it. Refresh `<lastmod>` dates as needed.
+- Ensure new pages include the Google tag (gtag.js) snippet and the Bing verification meta remains on `index.html`.
 
 ## Coding Style & Naming Conventions
 - Indentation: 2 spaces in HTML and CSS, no tabs.
