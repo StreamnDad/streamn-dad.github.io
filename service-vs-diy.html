@@ -197,87 +197,156 @@
             <h2>Options chart</h2>
             <p>Category, link, and objective pros/cons.</p>
             <div style="overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+              <table
+                style="
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 15px;
+                  border: 1px solid rgba(28, 75, 47, 0.2);
+                "
+              >
                 <thead>
-                  <tr style="text-align: left;">
-                    <th style="padding: 10px 8px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
+                  <tr style="text-align: left; background: rgba(28, 75, 47, 0.08);">
+                    <th style="padding: 10px 12px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
                       Category
                     </th>
-                    <th style="padding: 10px 8px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
+                    <th style="padding: 10px 12px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
                       Link
                     </th>
-                    <th style="padding: 10px 8px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
-                      Pros
-                    </th>
-                    <th style="padding: 10px 8px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
-                      Cons
+                    <th style="padding: 10px 12px; border-bottom: 1px solid rgba(28, 75, 47, 0.2);">
+                      Details
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td style="padding: 10px 8px;">Rink service</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(244, 247, 245, 0.85);">
+                    <td style="padding: 12px;">Rink service</td>
+                    <td style="padding: 12px;">
                       <a href="https://livebarn.com/">LiveBarn</a>
                     </td>
-                    <td style="padding: 10px 8px;">Managed capture and distribution.</td>
-                    <td style="padding: 10px 8px;">Limited control over production.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Managed capture and distribution.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Limited control over production.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Rink service</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(255, 255, 255, 0.9);">
+                    <td style="padding: 12px;">Rink service</td>
+                    <td style="padding: 12px;">
                       <a href="https://www.mnhockey.tv/en">Minnesota Hockey TV</a>
                     </td>
-                    <td style="padding: 10px 8px;">Dedicated hockey coverage.</td>
-                    <td style="padding: 10px 8px;">Availability varies by rink/region.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Dedicated hockey coverage.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Availability varies by rink/region.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Automated gear</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(244, 247, 245, 0.85);">
+                    <td style="padding: 12px;">Automated gear</td>
+                    <td style="padding: 12px;">
                       <a href="https://www.pixellot.tv/sports/ice-hockey/">Pixellot</a>
                     </td>
-                    <td style="padding: 10px 8px;">Auto-tracking camera system.</td>
-                    <td style="padding: 10px 8px;">Hardware investment required.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Auto-tracking camera system.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Hardware investment required.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Automated gear</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(255, 255, 255, 0.9);">
+                    <td style="padding: 12px;">Automated gear</td>
+                    <td style="padding: 12px;">
                       <a href="https://shop.movensee.com/en/use-cases/sports/hockey.html">Move'n See</a>
                     </td>
-                    <td style="padding: 10px 8px;">AI-assisted tracking options.</td>
-                    <td style="padding: 10px 8px;">Setup and tuning required.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>AI-assisted tracking options.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Setup and tuning required.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Automated gear</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(244, 247, 245, 0.85);">
+                    <td style="padding: 12px;">Automated gear</td>
+                    <td style="padding: 12px;">
                       <a href="https://playsight.com/our-sports/hockey/">PlaySight</a>
                     </td>
-                    <td style="padding: 10px 8px;">Automated capture and replay.</td>
-                    <td style="padding: 10px 8px;">Typically installed per facility.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Automated capture and replay.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Typically installed per facility.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Hosted platform</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(255, 255, 255, 0.9);">
+                    <td style="padding: 12px;">Hosted platform</td>
+                    <td style="padding: 12px;">
                       <a href="https://www.youtube.com/">YouTube</a>
                     </td>
-                    <td style="padding: 10px 8px;">Free hosting with wide reach.</td>
-                    <td style="padding: 10px 8px;">You handle production setup.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Free hosting with wide reach.</li>
+                        <li>Own your content archive.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>You handle production setup.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Hosted platform</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(244, 247, 245, 0.85);">
+                    <td style="padding: 12px;">Hosted platform</td>
+                    <td style="padding: 12px;">
                       <a href="https://www.facebook.com/">Facebook</a>
                     </td>
-                    <td style="padding: 10px 8px;">Strong local community reach.</td>
-                    <td style="padding: 10px 8px;">Policies can limit reach.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Strong local community reach.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>Policies can limit reach.</li>
+                      </ul>
+                    </td>
                   </tr>
-                  <tr>
-                    <td style="padding: 10px 8px;">Hosted platform</td>
-                    <td style="padding: 10px 8px;">
+                  <tr style="background: rgba(255, 255, 255, 0.9);">
+                    <td style="padding: 12px;">Hosted platform</td>
+                    <td style="padding: 12px;">
                       <a href="https://www.sportsengine.com/live">SportsEngine Live</a>
                     </td>
-                    <td style="padding: 10px 8px;">Sports-focused distribution.</td>
-                    <td style="padding: 10px 8px;">May require account setup.</td>
+                    <td style="padding: 12px;">
+                      <strong>Pros</strong>
+                      <ul style="margin: 6px 0 10px 18px;">
+                        <li>Sports-focused distribution.</li>
+                      </ul>
+                      <strong>Cons</strong>
+                      <ul style="margin: 6px 0 0 18px;">
+                        <li>May require account setup.</li>
+                      </ul>
+                    </td>
                   </tr>
                 </tbody>
               </table>
