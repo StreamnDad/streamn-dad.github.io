@@ -60,13 +60,21 @@
         ]
       }
     </script>
-    <link rel="icon" type="image/jpeg" href="assets/images/streamn-dad-logo-simple-1.jpg" />
+    <link rel="icon" type="image/jpeg" href="assets/images/streamn-dad-logo-simple-128.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Shippori+Mincho:wght@400;600&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Shippori+Mincho:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <style>
       :root {
         --forest: #1c4b2f;
@@ -628,7 +636,18 @@
     <div class="page">
       <header class="animate-in">
         <div class="brand">
-          <img src="assets/images/streamn-dad-logo-simple-1.jpg" alt="Streamn Dad logo" />
+          <picture>
+            <source
+              srcset="assets/images/streamn-dad-logo-simple-128.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/images/streamn-dad-logo-simple-128.jpg"
+              alt="Streamn Dad logo"
+              width="56"
+              height="56"
+            />
+          </picture>
           <h1>Streamn Dad</h1>
         </div>
         <nav>
@@ -654,7 +673,15 @@
           </div>
         </div>
         <div class="hero-card animate-in">
-          <img src="assets/images/streamn-dad-logo-1.jpg" alt="Streamn Dad badge logo" />
+          <picture>
+            <source srcset="assets/images/streamn-dad-logo-720.webp" type="image/webp" />
+            <img
+              src="assets/images/streamn-dad-logo-720.jpg"
+              alt="Streamn Dad badge logo"
+              width="720"
+              height="720"
+            />
+          </picture>
           <p class="card-text">
             A parent with a camera, a laptop, and a love for the game. I'm always
             experimenting with new ways to stream, clip, and share the best moments.
@@ -737,9 +764,33 @@
             who loves pushing gear and software to their limits.
           </p>
           <div class="about-icons">
-            <img src="assets/images/streamn_dad.jpg" alt="Streamn Dad icon" />
-            <img src="assets/images/streamn_dad2.PNG" alt="Streamn Dad alternate icon" />
-            <img src="assets/images/jake.png" alt="Jake Remitz" />
+            <picture>
+              <source srcset="assets/images/streamn_dad-128.webp" type="image/webp" />
+              <img
+                src="assets/images/streamn_dad-128.jpg"
+                alt="Streamn Dad icon"
+                width="64"
+                height="64"
+              />
+            </picture>
+            <picture>
+              <source srcset="assets/images/streamn_dad2-128.webp" type="image/webp" />
+              <img
+                src="assets/images/streamn_dad2-128.png"
+                alt="Streamn Dad alternate icon"
+                width="64"
+                height="64"
+              />
+            </picture>
+            <picture>
+              <source srcset="assets/images/jake-128.webp" type="image/webp" />
+              <img
+                src="assets/images/jake-128.png"
+                alt="Jake Remitz"
+                width="64"
+                height="64"
+              />
+            </picture>
           </div>
           <ul>
             <li>Experimenting with overlays</li>
