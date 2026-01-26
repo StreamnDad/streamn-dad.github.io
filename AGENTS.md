@@ -3,7 +3,7 @@
 ## Project Structure & Module Organization
 - `index.html` is the entire site (markup + CSS + content). Keep related styles near the section they style.
 - `CNAME` configures the GitHub Pages custom domain.
-- Image assets live in `assets/images` (e.g., `assets/images/streamn-dad-logo-1.jpg`). Add new assets there and keep filenames lowercase with hyphens.
+- Image assets live in `assets/images` (e.g., `assets/images/streamn-dad-logo-720.jpg`). Add new assets there and keep filenames lowercase with hyphens.
 
 ## Build, Test, and Development Commands
 This is a static site with no build pipeline.
