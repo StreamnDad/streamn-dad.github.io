@@ -564,13 +564,6 @@
         color: var(--forest);
       }
 
-      .feed-embed {
-        width: 100%;
-        border: 1px solid rgba(28, 75, 47, 0.1);
-        border-radius: 16px;
-        background: #fff;
-      }
-
       .latest-feed {
         display: grid;
         gap: 14px;
@@ -826,12 +819,6 @@
                 Live games appear here when active. Otherwise, you will see the
                 latest uploads.
               </p>
-              <iframe
-                class="feed-embed"
-                src="https://platform.twitter.com/widgets/timeline.html?dnt=true&height=520&lang=en&theme=light&screen_name=streamn_dad"
-                title="Streamn Dad on X"
-                loading="lazy"
-              ></iframe>
               <ul class="youtube-list">
                 <li>
                   <span>Streamn Dad</span>
@@ -850,6 +837,50 @@
                   <a href="https://www.youtube.com/@2014MinnesotaMachineOrange">Visit channel</a>
                 </li>
               </ul>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0f1419"
+                    d="M18.2 2H21l-6.1 7.1 7.2 12h-5.2l-4.1-7-6 7H4l6.6-7.7L3.8 2H9l3.7 6.2L18.2 2Z"
+                  />
+                </svg>
+                <span>X</span>
+              </div>
+              <p>Live game updates including highlights of the action.</p>
+              <a
+                class="twitter-timeline"
+                data-height="520"
+                data-dnt="true"
+                data-theme="light"
+                href="https://twitter.com/streamn_dad"
+              >
+                Tweets by streamn_dad
+              </a>
+            </div>
+          </div>
+          <div class="social-column">
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0f1419"
+                    d="M18.2 2H21l-6.1 7.1 7.2 12h-5.2l-4.1-7-6 7H4l6.6-7.7L3.8 2H9l3.7 6.2L18.2 2Z"
+                  />
+                </svg>
+                <span>X</span>
+              </div>
+              <p>Live game updates including highlights of the action.</p>
+              <a
+                class="twitter-timeline"
+                data-height="520"
+                data-dnt="true"
+                data-theme="light"
+                href="https://twitter.com/streamn_dad"
+              >
+                Tweets by streamn_dad
+              </a>
             </div>
           </div>
           <div class="social-column">
@@ -908,19 +939,6 @@
               </div>
               <p>Short-form clips and quick highlights.</p>
               <a href="https://www.tiktok.com/@streamn_dad">Follow</a>
-            </div>
-            <div class="social-card">
-              <div class="social-brand">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="#0f1419"
-                    d="M18.2 2H21l-6.1 7.1 7.2 12h-5.2l-4.1-7-6 7H4l6.6-7.7L3.8 2H9l3.7 6.2L18.2 2Z"
-                  />
-                </svg>
-                <span>X</span>
-              </div>
-              <p>Live game updates including highlights of the action.</p>
-              <a href="https://x.com/streamn_dad">Follow</a>
             </div>
             <div class="social-card">
               <div class="social-brand">
@@ -1024,5 +1042,6 @@
           mediumFeedEl.innerHTML = '<li>Unable to load Medium feed right now.</li>';
         });
     </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
