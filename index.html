@@ -564,6 +564,26 @@
         color: var(--forest);
       }
 
+      .impact-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .impact-title a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--forest);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .impact-title svg {
+        width: 20px;
+        height: 20px;
+      }
+
       .latest-feed {
         display: grid;
         gap: 14px;
@@ -729,7 +749,19 @@
       </section>
 
       <section class="panel animate-in" id="impact">
-        <h3>YouTube impact</h3>
+        <h3 class="impact-title">
+          YouTube impact
+          <a href="https://www.youtube.com/@streamn-dad" aria-label="Streamn Dad on YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#ff0033"
+                d="M23.5 6.4a3 3 0 0 0-2.1-2.2C19.6 3.7 12 3.7 12 3.7s-7.6 0-9.4.5a3 3 0 0 0-2.1 2.2A31 31 0 0 0 0 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.2c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.2A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.6Z"
+              />
+              <path fill="#fff" d="M9.7 15.5 15.9 12 9.7 8.5v7Z" />
+            </svg>
+            <span>Streamn Dad</span>
+          </a>
+        </h3>
         <p>Across my channels (Jan 18, 2025 – Jan 18, 2026).</p>
         <p>
           If you are aiming to be an influencer, these numbers are not staggering. But for a
