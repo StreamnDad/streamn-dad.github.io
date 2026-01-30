@@ -1,0 +1,35 @@
+name: Content change request
+description: Suggest edits or updates to site copy or links.
+title: "Content: "
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Include the exact text or section you want updated.
+      placeholder: "Update the Gear page camera section to mention..."
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: Where should the change be made?
+      placeholder: "https://streamn.dad/gear-basics.html"
+    validations:
+      required: true
+  - type: textarea
+    id: replacement
+    attributes:
+      label: Proposed copy or link (optional)
+      description: Paste the new copy or link if you have it.
+      placeholder: "Replace the paragraph with..."
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Why is this change needed?
+      placeholder: "Outdated info / new link / clarity"
+    validations:
+      required: false
