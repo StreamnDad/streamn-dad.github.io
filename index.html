@@ -574,6 +574,20 @@
         border-top: 1px solid rgba(22, 35, 28, 0.1);
       }
 
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      footer a {
+        color: var(--forest);
+        font-weight: 600;
+      }
+
       .tagline {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         letter-spacing: 0.3em;
@@ -652,8 +666,6 @@
           <h1>Streamn Dad</h1>
         </div>
         <nav>
-          <a href="#mission">Mission</a>
-          <a href="#what">About</a>
           <a href="#guides">Guides</a>
           <a href="#socials">Watch</a>
         </nav>
@@ -670,7 +682,7 @@
           </p>
           <div class="cta">
             <a class="button primary" href="#socials">Watch & follow</a>
-            <a class="button secondary" href="#mission">What this is</a>
+            <a class="button secondary" href="why-livestreaming.html">Why I stream</a>
           </div>
         </div>
         <div class="hero-card animate-in">
@@ -733,21 +745,6 @@
             <h4>Why Livestreaming</h4>
             <p>The heart behind sharing games and moments.</p>
           </a>
-          <a class="guide-card" href="benefits.html">
-            <div class="guide-icon"></div>
-            <h4>Benefits</h4>
-            <p>What families, teams, and communities gain.</p>
-          </a>
-          <a class="guide-card" href="getting-started.html">
-            <div class="guide-icon"></div>
-            <h4>Getting Started</h4>
-            <p>A beginner-friendly path from idea to first stream.</p>
-          </a>
-          <a class="guide-card" href="service-vs-diy.html">
-            <div class="guide-icon"></div>
-            <h4>Service vs DIY</h4>
-            <p>Choosing between a streaming platform or building your own.</p>
-          </a>
           <a class="guide-card" href="gear-basics.html">
             <div class="guide-icon"></div>
             <h4>Gear Basics</h4>
@@ -757,11 +754,6 @@
             <div class="guide-icon"></div>
             <h4>Software</h4>
             <p>The apps and services that power the stream.</p>
-          </a>
-          <a class="guide-card" href="production-overlays.html">
-            <div class="guide-icon"></div>
-            <h4>Production & Overlays</h4>
-            <p>Adding scoreboards, graphics, and polish.</p>
           </a>
           <a class="guide-card" href="workflow-sharing.html">
             <div class="guide-icon"></div>
@@ -924,7 +916,15 @@
 
       <footer>
         <span class="tagline">Streamn Dad • Minnesota</span>
-        <span><a href="privacy.html">Privacy Policy</a></span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="why-livestreaming.html">Why Livestreaming</a>
+          <a href="gear-basics.html">Gear</a>
+          <a href="software.html">Software</a>
+          <a href="workflow-sharing.html">Workflow</a>
+          <a href="story.html">Story</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
         <span>© 2026 Streamn Dad. All rights reserved.</span>
       </footer>
     </div>

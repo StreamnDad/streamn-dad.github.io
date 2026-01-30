@@ -156,6 +156,38 @@
         background: var(--ember);
       }
 
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        color: #344339;
+        padding-top: 12px;
+        border-top: 1px solid rgba(22, 35, 28, 0.1);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      footer a {
+        color: var(--forest);
+        font-weight: 600;
+      }
+
+      .tagline {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--evergreen);
+      }
+
       @media (max-width: 720px) {
         nav {
           display: none;
@@ -190,7 +222,9 @@
         <h1>Why Livestreaming</h1>
         <p>
           Livestreaming makes youth sports more accessible. It keeps families close to the action,
-          helps kids relive their progress, and shows what is possible with everyday gear.
+          helps players relive their progress, and shows what is possible with everyday gear. This
+          guide also covers a simple getting-started path and the main choices between services and
+          DIY setups.
         </p>
       </section>
 
@@ -198,14 +232,14 @@
         <article class="info-block">
           <div class="icon"></div>
           <div>
-            <h2>Distance disappears</h2>
+            <h2>Families stay close</h2>
             <p>
               Grandparents, siblings, and friends can watch even when travel or schedules get in
               the way.
             </p>
             <ul>
-              <li>More eyes on the game.</li>
-              <li>More connection for families.</li>
+              <li>Relive big moments together.</li>
+              <li>Share clips with extended family.</li>
             </ul>
           </div>
         </article>
@@ -213,13 +247,13 @@
         <article class="info-block">
           <div class="icon"></div>
           <div>
-            <h2>Moments become memories</h2>
+            <h2>Players grow faster</h2>
             <p>
-              Streams become highlight reels and long-term keepsakes that show growth over time.
+              Streams become highlight reels and a way to review progress across the season.
             </p>
             <ul>
-              <li>Players can see their progress.</li>
-              <li>Families can share milestones.</li>
+              <li>Learn from shifts and replays.</li>
+              <li>Celebrate milestones and teamwork.</li>
             </ul>
           </div>
         </article>
@@ -227,13 +261,14 @@
         <article class="info-block">
           <div class="icon"></div>
           <div>
-            <h2>Community visibility</h2>
+            <h2>Teams and community</h2>
             <p>
-              Local teams get more exposure, and youth sports get a stronger online presence.
+              Keep families informed and build a stronger culture while bringing visibility to
+              youth sports.
             </p>
             <ul>
-              <li>Celebrate effort and sportsmanship.</li>
-              <li>Spotlight the people behind the scenes.</li>
+              <li>Share game recaps and highlights.</li>
+              <li>Spotlight volunteers and coaches.</li>
             </ul>
           </div>
         </article>
@@ -241,17 +276,90 @@
         <article class="info-block">
           <div class="icon"></div>
           <div>
-            <h2>Tech curiosity</h2>
+            <h2>Personal growth</h2>
             <p>
-              Streaming is a fun way to learn new tools, build workflows, and share knowledge.
+              Livestreaming is a sandbox for learning new tools, building workflows, and sharing
+              knowledge.
             </p>
             <ul>
-              <li>Experiment with overlays and audio.</li>
-              <li>Learn by doing and improve fast.</li>
+              <li>Practice storytelling and production.</li>
+              <li>Build technical confidence.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="info-block">
+          <div class="icon"></div>
+          <div>
+            <h2>Getting started basics</h2>
+            <p>Start small, then add polish once the basics work reliably.</p>
+            <ul>
+              <li>Pick a goal for the first stream.</li>
+              <li>Choose a path (service or DIY).</li>
+              <li>Minimum gear: camera, tripod, stable upload.</li>
+              <li>Test before game day for audio and framing.</li>
+              <li>Share responsibly and respect privacy requests.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="info-block">
+          <div class="icon"></div>
+          <div>
+            <h2>Service vs DIY</h2>
+            <p>
+              There is no single right path. Choose what fits your time, budget, and comfort level,
+              then iterate from there.
+            </p>
+            <ul>
+              <li>Services are fast to start, but come with fees and limited control.</li>
+              <li>DIY setups take more effort, but give you flexibility and ownership.</li>
+              <li>Automated gear sits between the two with higher hardware costs.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="info-block">
+          <div class="icon"></div>
+          <div>
+            <h2>Common options</h2>
+            <p>Here are the main categories I see families and teams choosing from.</p>
+            <ul>
+              <li>
+                Rink services:
+                <a href="https://livebarn.com/">LiveBarn</a>,
+                <a href="https://www.mnhockey.tv/en">Minnesota Hockey TV</a>.
+              </li>
+              <li>
+                Automated gear:
+                <a href="https://www.pixellot.tv/sports/ice-hockey/">Pixellot</a>,
+                <a href="https://shop.movensee.com/en/use-cases/sports/hockey.html">Move'n See</a>,
+                <a href="https://playsight.com/our-sports/hockey/">PlaySight</a>.
+              </li>
+              <li>
+                Hosted platforms:
+                <a href="https://www.youtube.com/">YouTube</a>,
+                <a href="https://www.facebook.com/">Facebook</a>,
+                <a href="https://www.sportsengine.com/live">SportsEngine Live</a>.
+              </li>
             </ul>
           </div>
         </article>
       </section>
+
+      <footer>
+        <span class="tagline">Streamn Dad • Minnesota</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="why-livestreaming.html">Why Livestreaming</a>
+          <a href="gear-basics.html">Gear</a>
+          <a href="software.html">Software</a>
+          <a href="workflow-sharing.html">Workflow</a>
+          <a href="story.html">Story</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <span>© 2026 Streamn Dad. All rights reserved.</span>
+      </footer>
     </div>
   </body>
 </html>

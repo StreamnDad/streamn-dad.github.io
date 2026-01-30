@@ -156,6 +156,38 @@
         background: var(--ember);
       }
 
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        color: #344339;
+        padding-top: 12px;
+        border-top: 1px solid rgba(22, 35, 28, 0.1);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      footer a {
+        color: var(--forest);
+        font-weight: 600;
+      }
+
+      .tagline {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--evergreen);
+      }
+
       @media (max-width: 720px) {
         nav {
           display: none;
@@ -254,6 +286,20 @@
           </div>
         </article>
       </section>
+
+      <footer>
+        <span class="tagline">Streamn Dad • Minnesota</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="why-livestreaming.html">Why Livestreaming</a>
+          <a href="gear-basics.html">Gear</a>
+          <a href="software.html">Software</a>
+          <a href="workflow-sharing.html">Workflow</a>
+          <a href="story.html">Story</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <span>© 2026 Streamn Dad. All rights reserved.</span>
+      </footer>
     </div>
   </body>
 </html>
