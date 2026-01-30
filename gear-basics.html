@@ -106,16 +106,17 @@
         border-radius: 20px;
         padding: 20px;
         display: grid;
-        grid-template-columns: 64px 1fr;
+        grid-template-columns: minmax(160px, 220px) 1fr;
         gap: 16px;
         border: 1px solid rgba(28, 75, 47, 0.12);
         box-shadow: 0 12px 24px rgba(14, 31, 21, 0.12);
       }
 
-      .icon {
-        width: 64px;
-        height: 64px;
+      .gear-image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
         border-radius: 16px;
+        object-fit: cover;
         background: linear-gradient(135deg, rgba(31, 78, 52, 0.18), rgba(200, 155, 75, 0.22));
         border: 1px solid rgba(28, 75, 47, 0.2);
       }
@@ -131,6 +132,14 @@
 
       .info-block p {
         line-height: 1.7;
+      }
+
+      .info-block a {
+        color: var(--forest);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(28, 75, 47, 0.4);
+        text-underline-offset: 4px;
       }
 
       .info-block ul {
@@ -164,6 +173,10 @@
         .info-block {
           grid-template-columns: 1fr;
         }
+
+        .gear-image {
+          aspect-ratio: 16 / 9;
+        }
       }
     </style>
       <!-- Google tag (gtag.js) -->
@@ -189,68 +202,55 @@
       <section class="hero">
         <h1>Gear Basics</h1>
         <p>
-          You do not need a massive kit to get started. Focus on the essentials that make the
-          stream stable and watchable.
+          Here is the gear I am running right now, what I like, and what I still want to improve.
         </p>
       </section>
 
       <section class="info-stack">
         <article class="info-block">
-          <div class="icon"></div>
+          <img class="gear-image" src="assets/images/canon-xa-70.avif" alt="Canon XA70 camcorder on a tripod." />
           <div>
-            <h2>Camera</h2>
-            <p>Phone, camcorder, or DSLR. Keep it steady and framed.</p>
+            <h2>Camera - Canon XA70</h2>
+            <p>
+              It supports 4K at 30fps only when recording to local storage, so it cannot stream 4K.
+              That is my only regret in this purchase and something I would like to change in the
+              future. It can stream at 1080p at 59.98fps using the HDMI output, not the UVC output,
+              which tops out at 25fps.
+            </p>
+            <p>
+              The primary features for me are HDR support, image quality, and the 15x zoom. The
+              ability to tweak between Tv and Av modes is super helpful, and the Continuous AF
+              (Servo AF) focus speed keeps up with the pace of sports.
+            </p>
+            <p>
+              <a href="https://en.canon-cna.com/video-cameras/xa70/specifications/">See the Canon XA70 specs</a>.
+            </p>
             <ul>
-              <li>Tripod or fixed mount.</li>
-              <li>Wide enough to capture the zone.</li>
+              <li>HDMI output delivers 1080p at 59.98fps for streaming.</li>
+              <li>UVC output is limited to 25fps.</li>
+              <li>HDR, 15x zoom, and fast Continuous AF.</li>
             </ul>
           </div>
         </article>
 
         <article class="info-block">
-          <div class="icon"></div>
+          <img class="gear-image" src="assets/images/comica-vm20.jpg" alt="Comica VM20 shotgun microphone mounted on a camera." />
           <div>
-            <h2>Audio</h2>
-            <p>Capture the energy without clipping or distortion.</p>
+            <h2>Microphone - Comica VM20</h2>
+            <p>
+              I mount this on top of the camera to point it at the action. Generally speaking, it
+              works great, and it was a big step up from the old desktop USB mic I used before.
+            </p>
+            <p>
+              It has two low-cut filter modes that help reduce the white noise in the arena
+              (heaters, fans, angry parents).
+            </p>
+            <p>
+              <a href="https://www.comica-audio.com/product/VM20">See the Comica VM20 specs</a>.
+            </p>
             <ul>
-              <li>Test rink volume levels.</li>
-              <li>Dial in gain before puck drop.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="info-block">
-          <div class="icon"></div>
-          <div>
-            <h2>Connection</h2>
-            <p>Streaming lives and dies on upload speed.</p>
-            <ul>
-              <li>Test upload speeds early.</li>
-              <li>Bring a backup hotspot.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="info-block">
-          <div class="icon"></div>
-          <div>
-            <h2>Power and mounts</h2>
-            <p>Long games require reliable power and sturdy placement.</p>
-            <ul>
-              <li>Extra batteries or power bank.</li>
-              <li>Secure mounting for the full game.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="info-block">
-          <div class="icon"></div>
-          <div>
-            <h2>Checklist</h2>
-            <p>A simple pre-game routine keeps the stream calm.</p>
-            <ul>
-              <li>Frame, focus, audio check.</li>
-              <li>Stream key and destination confirmed.</li>
+              <li>Top-mounted directionality aimed at the play.</li>
+              <li>Dual low-cut filters for arena noise.</li>
             </ul>
           </div>
         </article>
