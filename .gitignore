@@ -1,0 +1,9 @@
+# AI/Agent tools
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursorrules
+.cursorignore
+.copilot/
+.github/copilot-instructions.md
+.aider*
