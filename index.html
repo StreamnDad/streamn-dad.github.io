@@ -634,11 +634,21 @@
         border: 1px solid rgba(28, 75, 47, 0.1);
       }
 
-      .latest-feed li a {
+      .latest-feed li a.article-title {
         color: var(--forest);
+        font-family: "Oswald", "Arial Narrow", sans-serif;
         font-weight: 600;
-        font-size: 15px;
-        line-height: 1.4;
+        font-size: 16px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .latest-feed li .subtitle {
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.5;
+        color: #2e3c32;
       }
 
       .latest-feed li .snippet {
@@ -646,7 +656,7 @@
         line-height: 1.5;
         color: #3b4b41;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
@@ -1114,9 +1124,17 @@
         return match ? match[1] : '';
       };
 
-      const extractSnippet = (html, maxLen) => {
-        const text = html ? html.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim() : '';
-        return text.length > maxLen ? text.slice(0, maxLen).replace(/\s+\S*$/, '') + '...' : text;
+      const extractSubtitle = (html) => {
+        if (!html) return '';
+        const match = html.match(/<p><em>([^<]+)<\/em><\/p>/);
+        return match ? match[1] : '';
+      };
+
+      const extractSnippet = (html, subtitle, maxLen) => {
+        if (!html) return '';
+        const text = html.replace(/<figure>.*?<\/figure>/gs, '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim();
+        const clean = subtitle ? text.replace(subtitle, '').trim() : text;
+        return clean.length > maxLen ? clean.slice(0, maxLen).replace(/\s+\S*$/, '') + '...' : clean;
       };
 
       fetch(rssToJson)
@@ -1136,13 +1154,16 @@
                 month: 'short',
                 day: 'numeric'
               });
-              const image = item.thumbnail || extractImage(item.description || item.content);
-              const snippet = extractSnippet(item.description || item.content, 150);
+              const html = item.description || item.content;
+              const image = item.thumbnail || extractImage(html);
+              const subtitle = extractSubtitle(html);
+              const snippet = extractSnippet(html, subtitle, 120);
               const tags = (item.categories || []).slice(0, 3);
               return `
                 <li>
                   ${image ? `<img src="${image}" alt="" loading="lazy" />` : ''}
-                  <a href="${item.link}">${item.title}</a>
+                  <a class="article-title" href="${item.link}">${item.title}</a>
+                  ${subtitle ? `<p class="subtitle">${subtitle}</p>` : ''}
                   ${snippet ? `<p class="snippet">${snippet}</p>` : ''}
                   ${tags.length ? `<div class="tags">${tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
                   ${dateText ? `<time>${dateText}</time>` : ''}
