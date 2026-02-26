@@ -56,7 +56,8 @@
           "https://x.com/streamn_dad",
           "https://www.tiktok.com/@streamn_dad",
           "https://www.linkedin.com/in/jremitz/",
-          "https://github.com/StreamnDad"
+          "https://github.com/StreamnDad",
+          "https://www.reddit.com/user/streamn-dad/"
         ]
       }
     </script>
@@ -518,11 +519,27 @@
       }
 
       .social-card a {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 999px;
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.12em;
         font-size: 12px;
-        color: var(--forest);
+        color: #fff;
+        background: var(--forest);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .social-card a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 16px rgba(14, 31, 21, 0.2);
+      }
+
+      .social-card .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
       }
 
       .youtube-embed {
@@ -934,8 +951,10 @@
                 <span>GitHub</span>
               </div>
               <p>Open source tools for livestreaming youth hockey.</p>
-              <a href="https://github.com/StreamnDad">View repos</a>
-              <a href="https://github.com/StreamnDad/streamn-dad.github.io/issues">Leave feedback</a>
+              <div class="social-links">
+                <a href="https://github.com/StreamnDad">View repos</a>
+                <a href="https://github.com/StreamnDad/streamn-dad.github.io/issues">Leave feedback</a>
+              </div>
             </div>
             <div class="social-card">
               <div class="social-brand">
@@ -975,6 +994,21 @@
               </div>
               <p>Longer write-ups and behind-the-scenes notes.</p>
               <a href="https://medium.com/@streamn-dad">Read</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#ff4500" />
+                  <ellipse cx="12" cy="14" rx="6" ry="4" fill="#fff" />
+                  <circle cx="9.5" cy="13.5" r="1" fill="#ff4500" />
+                  <circle cx="14.5" cy="13.5" r="1" fill="#ff4500" />
+                  <circle cx="17" cy="8" r="1.5" fill="#fff" />
+                  <path d="M12 4c0 0 0 4 4 4" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round" />
+                </svg>
+                <span>Reddit</span>
+              </div>
+              <p>Discussion, tips, and community around youth hockey streaming.</p>
+              <a href="https://www.reddit.com/user/streamn-dad/">Follow</a>
             </div>
           </div>
         </div>
