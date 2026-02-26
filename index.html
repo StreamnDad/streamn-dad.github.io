@@ -471,15 +471,14 @@
 
       .socials {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 22px;
         width: 100%;
       }
 
-      .social-column {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
       }
 
       .social-brand {
@@ -509,8 +508,9 @@
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.14em;
-        font-size: 12px;
-        color: var(--evergreen);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--forest);
       }
 
       .social-card p {
@@ -521,6 +521,7 @@
 
       .social-card a {
         display: inline-block;
+        width: fit-content;
         padding: 8px 16px;
         border-radius: 999px;
         font-family: "Oswald", "Arial Narrow", sans-serif;
@@ -695,7 +696,7 @@
           align-items: stretch;
         }
 
-        .socials {
+        .social-grid {
           grid-template-columns: 1fr;
         }
 
@@ -840,51 +841,50 @@
           channels.
         </p>
         <div class="socials">
-          <div class="social-column">
-            <div class="social-card">
-              <div class="social-brand">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="#ff0033"
-                    d="M23.5 6.4a3 3 0 0 0-2.1-2.2C19.6 3.7 12 3.7 12 3.7s-7.6 0-9.4.5a3 3 0 0 0-2.1 2.2A31 31 0 0 0 0 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.2c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.2A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.6Z"
-                  />
-                  <path fill="#fff" d="M9.7 15.5 15.9 12 9.7 8.5v7Z" />
-                </svg>
-                <span>YouTube live</span>
-              </div>
-              <p>Streamn Dad livestreams, highlights, shorts, and playlists.</p>
-              <iframe
-                class="youtube-embed"
-                src="https://www.youtube.com/embed?listType=playlist&list=UUH_6V-9Hcy6BJ-_junYtXWg"
-                title="Streamn Dad latest uploads"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-              <p class="youtube-note">
-                Live games appear here when active. Otherwise, you will see the
-                latest uploads.
-              </p>
-              <ul class="youtube-list">
-                <li>
-                  <span>Streamn Dad</span>
-                  <a href="https://www.youtube.com/@streamn-dad">Visit channel</a>
-                </li>
-                <li>
-                  <span>Roseville Youth Hockey</span>
-                  <a href="https://www.youtube.com/@rosevilleareayouthhockey">Visit channel</a>
-                </li>
-                <li>
-                  <span>2016 MN Blades</span>
-                  <a href="https://www.youtube.com/@2016MNBlades">Visit channel</a>
-                </li>
-                <li>
-                  <span>2014 MN Machine Orange</span>
-                  <a href="https://www.youtube.com/@2014MinnesotaMachineOrange">Visit channel</a>
-                </li>
-              </ul>
+          <div class="social-card">
+            <div class="social-brand">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="#ff0033"
+                  d="M23.5 6.4a3 3 0 0 0-2.1-2.2C19.6 3.7 12 3.7 12 3.7s-7.6 0-9.4.5a3 3 0 0 0-2.1 2.2A31 31 0 0 0 0 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.2c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.2A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.6Z"
+                />
+                <path fill="#fff" d="M9.7 15.5 15.9 12 9.7 8.5v7Z" />
+              </svg>
+              <span>YouTube</span>
             </div>
+            <p>Streamn Dad livestreams, highlights, shorts, and playlists.</p>
+            <iframe
+              class="youtube-embed"
+              src="https://www.youtube.com/embed?listType=playlist&list=UUH_6V-9Hcy6BJ-_junYtXWg"
+              title="Streamn Dad latest uploads"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <p class="youtube-note">
+              Live games appear here when active. Otherwise, you will see the
+              latest uploads.
+            </p>
+            <ul class="youtube-list">
+              <li>
+                <span>Streamn Dad</span>
+                <a href="https://www.youtube.com/@streamn-dad">Visit channel</a>
+              </li>
+              <li>
+                <span>Roseville Youth Hockey</span>
+                <a href="https://www.youtube.com/@rosevilleareayouthhockey">Visit channel</a>
+              </li>
+              <li>
+                <span>2016 MN Blades</span>
+                <a href="https://www.youtube.com/@2016MNBlades">Visit channel</a>
+              </li>
+              <li>
+                <span>2014 MN Machine Orange</span>
+                <a href="https://www.youtube.com/@2014MinnesotaMachineOrange">Visit channel</a>
+              </li>
+            </ul>
           </div>
-          <div class="social-column">
+
+          <div class="social-grid">
             <div class="social-card">
               <div class="social-brand">
                 <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -946,22 +946,6 @@
                 <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill="#0f1419"
-                    d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1-3-.1-.2-.4-1.3.1-2.7 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.5 1.4.2 2.5.1 2.7.6.8 1 1.8 1 3 0 4.1-2.4 5-4.7 5.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z"
-                  />
-                </svg>
-                <span>GitHub</span>
-              </div>
-              <p>Open source tools for livestreaming youth hockey.</p>
-              <div class="social-links">
-                <a href="https://github.com/StreamnDad">View repos</a>
-                <a href="https://github.com/StreamnDad/streamn-dad.github.io/issues">Leave feedback</a>
-              </div>
-            </div>
-            <div class="social-card">
-              <div class="social-brand">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="#0f1419"
                     d="M18.2 2H21l-6.1 7.1 7.2 12h-5.2l-4.1-7-6 7H4l6.6-7.7L3.8 2H9l3.7 6.2L18.2 2Z"
                   />
                 </svg>
@@ -969,32 +953,6 @@
               </div>
               <p>Live game updates including highlights of the action.</p>
               <a href="https://x.com/streamn_dad">Follow</a>
-            </div>
-            <div class="social-card">
-              <div class="social-brand">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="#0a66c2"
-                    d="M6.9 9.4H3.8V20h3.1V9.4Zm-1.6-5A1.8 1.8 0 1 0 5.4 8a1.8 1.8 0 0 0-.1-3.6ZM20.2 13.7c0-3.4-1.8-5-4.2-5a3.6 3.6 0 0 0-3.2 1.8V9.4H9.8V20h3.1v-5.5c0-1.5.3-3 2.2-3 1.9 0 1.9 1.8 1.9 3.1V20h3.1v-6.3Z"
-                  />
-                </svg>
-                <span>LinkedIn</span>
-              </div>
-              <p>My information and professional work.</p>
-              <a href="https://www.linkedin.com/in/jremitz/">Connect</a>
-            </div>
-            <div class="social-card">
-              <div class="social-brand">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="#000000"
-                    d="M6.4 6.2c-1.4 0-2.5-1.1-2.5-2.5S5 1.2 6.4 1.2s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5Zm-2 16.6V8.4h4v14.4h-4Zm6.2-14.4h3.8v2h.1c.5-1 1.8-2.1 3.8-2.1 4.1 0 4.8 2.7 4.8 6.2v8.3h-4v-7.4c0-1.8 0-4.1-2.5-4.1-2.6 0-3 2-3 4v7.5h-4V8.4Z"
-                  />
-                </svg>
-                <span>Medium</span>
-              </div>
-              <p>Longer write-ups and behind-the-scenes notes.</p>
-              <a href="https://medium.com/@streamn-dad">Read</a>
             </div>
             <div class="social-card">
               <div class="social-brand">
@@ -1027,6 +985,51 @@
               </div>
               <p>Behind-the-scenes snaps from game day.</p>
               <a href="https://www.snapchat.com/@streamn-dad">Follow</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0f1419"
+                    d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1-3-.1-.2-.4-1.3.1-2.7 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.5 1.4.2 2.5.1 2.7.6.8 1 1.8 1 3 0 4.1-2.4 5-4.7 5.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z"
+                  />
+                </svg>
+                <span>GitHub</span>
+              </div>
+              <p>Open source tools for livestreaming youth hockey.</p>
+              <div class="social-links">
+                <a href="https://github.com/StreamnDad">View repos</a>
+                <a href="https://github.com/StreamnDad/streamn-dad.github.io/issues">Leave feedback</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-grid">
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0a66c2"
+                    d="M6.9 9.4H3.8V20h3.1V9.4Zm-1.6-5A1.8 1.8 0 1 0 5.4 8a1.8 1.8 0 0 0-.1-3.6ZM20.2 13.7c0-3.4-1.8-5-4.2-5a3.6 3.6 0 0 0-3.2 1.8V9.4H9.8V20h3.1v-5.5c0-1.5.3-3 2.2-3 1.9 0 1.9 1.8 1.9 3.1V20h3.1v-6.3Z"
+                  />
+                </svg>
+                <span>LinkedIn</span>
+              </div>
+              <p>My information and professional work.</p>
+              <a href="https://www.linkedin.com/in/jremitz/">Connect</a>
+            </div>
+            <div class="social-card">
+              <div class="social-brand">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#000000"
+                    d="M6.4 6.2c-1.4 0-2.5-1.1-2.5-2.5S5 1.2 6.4 1.2s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5Zm-2 16.6V8.4h4v14.4h-4Zm6.2-14.4h3.8v2h.1c.5-1 1.8-2.1 3.8-2.1 4.1 0 4.8 2.7 4.8 6.2v8.3h-4v-7.4c0-1.8 0-4.1-2.5-4.1-2.6 0-3 2-3 4v7.5h-4V8.4Z"
+                  />
+                </svg>
+                <span>Medium</span>
+              </div>
+              <p>Longer write-ups and behind-the-scenes notes.</p>
+              <a href="https://medium.com/@streamn-dad">Read</a>
             </div>
           </div>
         </div>
