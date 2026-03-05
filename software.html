@@ -129,6 +129,13 @@
         height: 56px;
       }
 
+      .gear-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+      }
+
       .info-block h2 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         letter-spacing: 0.1em;
@@ -262,15 +269,17 @@
       <section class="info-stack">
         <article class="info-block" id="reeln-cli">
           <div class="gear-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1-3-.1-.2-.4-1.3.1-2.7 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.5 1.4.2 2.5.1 2.7.6.8 1 1.8 1 3 0 4.1-2.4 5-4.7 5.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z" fill="#1c4b2f" />
-            </svg>
+            <img
+              src="https://raw.githubusercontent.com/StreamnDad/reeln-cli/main/assets/logo.jpg"
+              alt="reeln-cli logo"
+              loading="lazy"
+            />
           </div>
           <div>
             <h2>reeln-cli</h2>
             <p>
-              Open source CLI toolkit for streaming, publishing, and managing youth sports livestreams.
-              Released under AGPL-3.0.
+              Platform-agnostic CLI toolkit for livestreamers — video manipulation, segment and
+              highlight management, and media lifecycle. Sport-specific through configuration.
               <a href="https://github.com/StreamnDad/reeln-cli">View on GitHub</a> |
               <a href="https://reeln-cli.readthedocs.io/">Documentation</a>
             </p>
@@ -282,7 +291,7 @@
                     <path d="M7 10l3 2-3 2" stroke="#f4f7f5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M13 14h4" stroke="#f4f7f5" stroke-width="1.5" stroke-linecap="round" />
                   </svg>
-                  <span>Game setup and folder scaffolding for each stream session.</span>
+                  <span>Game lifecycle management — init, segment, highlights, finish.</span>
                 </div>
               </li>
               <li>
@@ -294,7 +303,7 @@
                     <rect x="14" y="8" width="4" height="2" fill="#f4f7f5" />
                     <rect x="14" y="12" width="4" height="2" fill="#f4f7f5" />
                   </svg>
-                  <span>Replay management and period highlight extraction.</span>
+                  <span>FFmpeg-powered video merging — concat segments into highlight reels, no re-encoding.</span>
                 </div>
               </li>
               <li>
@@ -303,7 +312,41 @@
                     <circle cx="12" cy="12" r="9" fill="#1c4b2f" />
                     <path d="M12 6.3 13.6 9l3.1-.4-1.9 2.6 1.9 2.6-3.1-.4-1.6 2.7-1.6-2.7-3.1.4 1.9-2.6-1.9-2.6 3.1.4L12 6.3Z" fill="#f4f7f5" />
                   </svg>
-                  <span>Story-of-the-game merging for full game recaps.</span>
+                  <span>Sport-agnostic segment model — hockey periods, basketball quarters, soccer halves, and more.</span>
+                </div>
+              </li>
+              <li>
+                <div class="tech-item">
+                  <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="16" height="16" rx="3" fill="#1c4b2f" />
+                    <path d="M8 9h8v2H8zm0 4h5v2H8z" fill="#f4f7f5" />
+                  </svg>
+                  <span>Plugin-ready architecture — lifecycle hooks, typed capability interfaces, and config schema declarations.</span>
+                </div>
+              </li>
+              <li>
+                <div class="tech-item">
+                  <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 16h10a4 4 0 0 0 0-8 5 5 0 0 0-9-1A4 4 0 0 0 7 16Z" fill="#4285f4" />
+                    <path d="M7 16h8a4 4 0 0 0 0-8" fill="#34a853" opacity="0.8" />
+                    <path d="M7 16h6a4 4 0 0 0 0-8" fill="#fbbc04" opacity="0.8" />
+                  </svg>
+                  <span>
+                    <a href="https://github.com/StreamnDad/reeln-plugin-google">reeln-plugin-google</a>
+                    — YouTube livestreams, uploads, playlists, and comments.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="tech-item">
+                  <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="3" fill="#1c4b2f" />
+                    <path d="M7 9h4v2H7zm0 4h4v2H7zm6-4h4v2h-4zm0 4h4v2h-4z" fill="#f4f7f5" />
+                  </svg>
+                  <span>
+                    <a href="https://github.com/StreamnDad/reeln-plugin-streamn-scoreboard">reeln-plugin-streamn-scoreboard</a>
+                    — bridges game init to OBS scoreboard text files.
+                  </span>
                 </div>
               </li>
             </ul>
@@ -386,6 +429,30 @@
                     <circle cx="12" cy="15.5" r="5" fill="#101010" opacity="0.8" />
                   </svg>
                   <span><a href="https://obsproject.com/">OBS</a> for live production.</span>
+                </div>
+              </li>
+              <li>
+                <div class="tech-item">
+                  <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="16" height="16" rx="3" fill="#1c4b2f" />
+                    <path d="M8 9h8v2H8zm0 4h5v2H8z" fill="#f4f7f5" />
+                  </svg>
+                  <span>
+                    <a href="https://obsproject.com/forum/resources/directory-watch-media.801/">Directory Watch Media</a>
+                    plugin — watches for the latest replays to share.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="tech-item">
+                  <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="16" height="16" rx="3" fill="#1c4b2f" />
+                    <path d="M8 9h8v2H8zm0 4h5v2H8z" fill="#f4f7f5" />
+                  </svg>
+                  <span>
+                    <a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/">Advanced Scene Switcher</a>
+                    plugin — shows "Power Play" and penalties when penalties are added.
+                  </span>
                 </div>
               </li>
               <li>
