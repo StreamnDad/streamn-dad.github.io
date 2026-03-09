@@ -683,6 +683,30 @@
         text-transform: uppercase;
       }
 
+      .latest-feed .see-more {
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      .latest-feed .see-more a {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--evergreen);
+        text-decoration: none;
+        border: 2px solid var(--evergreen);
+        padding: 8px 24px;
+        border-radius: 999px;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .latest-feed .see-more a:hover {
+        background: var(--evergreen);
+        color: #fff;
+      }
+
       footer {
         display: flex;
         flex-direction: column;
@@ -1145,7 +1169,8 @@
             return;
           }
 
-          const items = data.items.slice(0, 4);
+          const maxItems = 9;
+          const items = data.items.slice(0, maxItems);
           mediumFeedEl.innerHTML = items
             .map((item) => {
               const date = new Date(item.pubDate);
@@ -1171,6 +1196,13 @@
               `;
             })
             .join('');
+
+          if (data.items.length > maxItems) {
+            const seeMore = document.createElement('div');
+            seeMore.className = 'see-more';
+            seeMore.innerHTML = '<a href="https://medium.com/@streamn-dad">See more on Medium</a>';
+            mediumFeedEl.parentElement.appendChild(seeMore);
+          }
         })
         .catch(() => {
           mediumFeedEl.innerHTML = '<li>Unable to load Medium feed right now.</li>';
