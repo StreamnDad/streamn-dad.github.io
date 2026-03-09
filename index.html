@@ -1150,7 +1150,8 @@
 
       const extractSubtitle = (html) => {
         if (!html) return '';
-        const match = html.match(/<p><em>([^<]+)<\/em><\/p>/);
+        const cleaned = html.replace(/<figure>.*?<\/figure>/gs, '');
+        const match = cleaned.match(/<h3>([^<]+)<\/h3>/);
         return match ? match[1] : '';
       };
 
