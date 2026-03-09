@@ -1184,7 +1184,7 @@
               const image = item.thumbnail || extractImage(html);
               const subtitle = extractSubtitle(html);
               const snippet = extractSnippet(html, subtitle, 120);
-              const tags = (item.categories || []).slice(0, 3);
+              const tags = (item.categories || []).slice(0, 5);
               return `
                 <li>
                   ${image ? `<img src="${image}" alt="" loading="lazy" />` : ''}
