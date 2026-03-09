@@ -102,6 +102,33 @@
         gap: 18px;
       }
 
+      .section-header {
+        padding: 0 4px;
+      }
+
+      .section-header h2 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 20px;
+        color: var(--forest);
+        margin-bottom: 4px;
+      }
+
+      .section-header p {
+        line-height: 1.7;
+        font-size: 15px;
+        color: #344339;
+      }
+
+      .section-header a {
+        color: var(--forest);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(28, 75, 47, 0.4);
+        text-underline-offset: 4px;
+      }
+
       .info-block {
         background: #fdfefd;
         border-radius: 20px;
@@ -261,12 +288,16 @@
       <section class="hero">
         <h1>Software</h1>
         <p>
-          This is the software behind my current workflow, from live production to editing and
-          delivery.
+          Open-source tools I build and the software behind my current workflow, from live
+          production to editing and delivery.
         </p>
       </section>
 
       <section class="info-stack">
+        <div class="section-header">
+          <h2>My Open Source</h2>
+          <p>Projects I build and maintain under the <a href="https://github.com/StreamnDad">StreamnDad</a> GitHub organization.</p>
+        </div>
         <article class="info-block" id="reeln-cli">
           <div class="gear-icon" aria-hidden="true">
             <img
@@ -408,7 +439,13 @@
             </ul>
           </div>
         </article>
+      </section>
 
+      <section class="info-stack">
+        <div class="section-header">
+          <h2>Tools I Use</h2>
+          <p>Third-party software that powers the stream from capture to delivery.</p>
+        </div>
         <article class="info-block" id="streaming-capture">
           <div class="gear-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
