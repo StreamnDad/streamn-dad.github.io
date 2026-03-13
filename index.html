@@ -400,10 +400,17 @@
         background: #fdfefd;
         border-radius: 20px;
         padding: 18px 20px;
-        border: 1px solid rgba(28, 75, 47, 0.15);
+        border: 2px solid var(--ember);
         box-shadow: 0 12px 24px rgba(14, 31, 21, 0.12);
         display: grid;
         gap: 10px;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .guide-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 32px rgba(14, 31, 21, 0.18);
       }
 
       .guide-card-header {
@@ -419,6 +426,11 @@
         color: var(--forest);
         margin: 0;
         font-size: 16px;
+      }
+
+      .guide-card h4::after {
+        content: " →";
+        color: var(--ember);
       }
 
       .guide-card p {
