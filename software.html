@@ -91,6 +91,17 @@
         gap: 12px;
       }
 
+      .hero-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-header img {
+        width: 48px;
+        height: auto;
+      }
+
       .hero h1 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
@@ -291,7 +302,10 @@
       </header>
 
       <section class="hero">
-        <h1>Software</h1>
+        <div class="hero-header">
+          <img src="assets/images/icon-software.png" alt="Software icon" />
+          <h1>Software</h1>
+        </div>
         <p>
           Open-source tools I build and the software behind my current workflow, from live
           production to editing and delivery.

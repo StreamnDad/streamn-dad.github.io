@@ -91,6 +91,17 @@
         gap: 12px;
       }
 
+      .hero-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-header img {
+        width: 48px;
+        height: auto;
+      }
+
       .hero h1 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
@@ -238,7 +249,10 @@
       </header>
 
       <section class="hero">
-        <h1>Gear Basics</h1>
+        <div class="hero-header">
+          <img src="assets/images/icon-gear.png" alt="Gear icon" />
+          <h1>Gear Basics</h1>
+        </div>
         <p>
           Here is the gear I am running right now, what I like, and what I still want to improve.
         </p>

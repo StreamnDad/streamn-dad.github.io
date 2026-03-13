@@ -91,6 +91,17 @@
         gap: 12px;
       }
 
+      .hero-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-header img {
+        width: 48px;
+        height: auto;
+      }
+
       .hero h1 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
@@ -225,7 +236,10 @@
       </header>
 
       <section class="hero">
-        <h1>Workflow & Sharing</h1>
+        <div class="hero-header">
+          <img src="assets/images/icon-workflow.png" alt="Workflow icon" />
+          <h1>Workflow & Sharing</h1>
+        </div>
         <p>
           The best workflows are fast, repeatable, and easy for families to follow.
         </p>

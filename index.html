@@ -406,6 +406,12 @@
         gap: 10px;
       }
 
+      .guide-card-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
       .guide-card h4 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
@@ -422,7 +428,7 @@
       }
 
       img.guide-icon {
-        width: 80px;
+        width: 40px;
         height: auto;
         display: block;
       }
@@ -890,23 +896,31 @@
         <p>Short reads that break down why I stream, how to start, and the software behind it.</p>
         <div class="guide-grid">
           <a class="guide-card" href="why-livestreaming.html">
-            <img class="guide-icon" src="assets/images/icon-streaming.png" alt="Livestreaming icon" />
-            <h4>Why Livestreaming</h4>
+            <div class="guide-card-header">
+              <img class="guide-icon" src="assets/images/icon-streaming.png" alt="Livestreaming icon" />
+              <h4>Why Livestreaming</h4>
+            </div>
             <p>The heart behind sharing games and moments.</p>
           </a>
           <a class="guide-card" href="gear-basics.html">
-            <img class="guide-icon" src="assets/images/icon-gear.png" alt="Gear icon" />
-            <h4>Gear Basics</h4>
+            <div class="guide-card-header">
+              <img class="guide-icon" src="assets/images/icon-gear.png" alt="Gear icon" />
+              <h4>Gear Basics</h4>
+            </div>
             <p>Practical setup ideas that stay lightweight.</p>
           </a>
           <a class="guide-card" href="software.html">
-            <img class="guide-icon" src="assets/images/icon-software.png" alt="Software icon" />
-            <h4>Software</h4>
+            <div class="guide-card-header">
+              <img class="guide-icon" src="assets/images/icon-software.png" alt="Software icon" />
+              <h4>Software</h4>
+            </div>
             <p>The apps and services that power the stream.</p>
           </a>
           <a class="guide-card" href="workflow-sharing.html">
-            <img class="guide-icon" src="assets/images/icon-workflow.png" alt="Workflow icon" />
-            <h4>Workflow & Sharing</h4>
+            <div class="guide-card-header">
+              <img class="guide-icon" src="assets/images/icon-workflow.png" alt="Workflow icon" />
+              <h4>Workflow & Sharing</h4>
+            </div>
             <p>Clips, highlights, and getting them out fast.</p>
           </a>
         </div>

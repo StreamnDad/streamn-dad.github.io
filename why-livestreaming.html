@@ -91,6 +91,17 @@
         gap: 12px;
       }
 
+      .hero-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-header img {
+        width: 48px;
+        height: auto;
+      }
+
       .hero h1 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         text-transform: uppercase;
@@ -225,7 +236,10 @@
       </header>
 
       <section class="hero">
-        <h1>Why Livestreaming</h1>
+        <div class="hero-header">
+          <img src="assets/images/icon-streaming.png" alt="Livestreaming icon" />
+          <h1>Why Livestreaming</h1>
+        </div>
         <p>
           Livestreaming makes youth sports more accessible. It keeps families close to the action,
           helps players relive their progress, and shows what is possible with everyday gear. This
