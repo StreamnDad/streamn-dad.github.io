@@ -137,6 +137,14 @@
         border: 1px solid rgba(28, 75, 47, 0.2);
       }
 
+      .screenshot {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid rgba(28, 75, 47, 0.15);
+        box-shadow: 0 8px 16px rgba(14, 31, 21, 0.1);
+        margin-top: 12px;
+      }
+
       .info-block h2 {
         font-family: "Oswald", "Arial Narrow", sans-serif;
         letter-spacing: 0.1em;
@@ -196,7 +204,7 @@
         display: none;
       }
 
-      .download-btn {
+      .info-block a.download-btn {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -204,6 +212,7 @@
         padding: 12px 24px;
         background: var(--forest);
         color: #fff;
+        text-decoration: none;
         font-family: "Oswald", "Arial Narrow", sans-serif;
         font-size: 15px;
         text-transform: uppercase;
@@ -351,6 +360,12 @@
                 contains penalty numbers, waits 1 second then shows the Away Penalty Group and Home PP items.
               </li>
             </ul>
+            <img
+              class="screenshot"
+              src="assets/images/advanced-scene-switcher-1.png"
+              alt="Power play overlay shown on a live hockey stream"
+              loading="lazy"
+            />
           </div>
         </article>
 
@@ -378,6 +393,13 @@
                 <code>Home PP</code>, <code>Away PP</code>) to match your OBS scene setup.
               </li>
             </ol>
+
+            <img
+              class="screenshot"
+              src="assets/images/advanced-scene-switcher-2.png"
+              alt="Advanced Scene Switcher macro configuration after import"
+              loading="lazy"
+            />
 
             <a
               class="download-btn"
