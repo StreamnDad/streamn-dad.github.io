@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Scene Switcher Config | Streamn Dad</title>
+    <meta
+      name="description"
+      content="Download an Advanced Scene Switcher config with penalty and power play macros that integrate with Streamn Scoreboard text files for OBS."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://streamn.dad/advanced-scene-switcher.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Shippori+Mincho:wght@400;600&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Shippori+Mincho:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <style>
+      :root {
+        --forest: #1c4b2f;
+        --evergreen: #2f6b44;
+        --ice: #f4f7f5;
+        --ink: #16231c;
+        --ember: #c89b4b;
+        --shadow: 0 18px 32px rgba(12, 26, 18, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Shippori Mincho", "Times New Roman", serif;
+        background: radial-gradient(circle at top, #ffffff 0%, #eef3ef 40%, #dfe9df 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px clamp(18px, 4vw, 56px) 64px;
+        display: grid;
+        gap: 28px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      header a {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--forest);
+      }
+
+      nav {
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        background: #fff;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(28, 75, 47, 0.12);
+        display: grid;
+        gap: 12px;
+      }
+
+      .hero-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-header img {
+        width: 48px;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--forest);
+      }
+
+      .hero p {
+        line-height: 1.7;
+      }
+
+      .info-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .info-block {
+        background: #fdfefd;
+        border-radius: 20px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 16px;
+        border: 1px solid rgba(28, 75, 47, 0.12);
+        box-shadow: 0 12px 24px rgba(14, 31, 21, 0.12);
+      }
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(31, 78, 52, 0.18), rgba(200, 155, 75, 0.22));
+        border: 1px solid rgba(28, 75, 47, 0.2);
+      }
+
+      .info-block h2 {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: var(--evergreen);
+        margin-bottom: 8px;
+      }
+
+      .info-block p {
+        line-height: 1.7;
+      }
+
+      .info-block a {
+        color: var(--forest);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(28, 75, 47, 0.4);
+        text-underline-offset: 4px;
+      }
+
+      .info-block ul {
+        list-style: none;
+        display: grid;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .info-block li {
+        position: relative;
+        padding-left: 16px;
+      }
+
+      .info-block li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--ember);
+      }
+
+      .info-block ol {
+        display: grid;
+        gap: 8px;
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+
+      .info-block ol li {
+        padding-left: 4px;
+      }
+
+      .info-block ol li::before {
+        display: none;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding: 12px 24px;
+        background: var(--forest);
+        color: #fff;
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.2s;
+      }
+
+      .download-btn:hover {
+        background: var(--evergreen);
+      }
+
+      .download-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .json-preview {
+        margin-top: 16px;
+      }
+
+      .json-preview summary {
+        cursor: pointer;
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 14px;
+        color: var(--evergreen);
+        padding: 8px 0;
+      }
+
+      .json-preview pre {
+        background: var(--ink);
+        color: var(--ice);
+        border-radius: 12px;
+        padding: 16px;
+        overflow-x: auto;
+        font-size: 12px;
+        line-height: 1.5;
+        max-height: 480px;
+        overflow-y: auto;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        color: #344339;
+        padding-top: 12px;
+        border-top: 1px solid rgba(22, 35, 28, 0.1);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      footer a {
+        color: var(--forest);
+        font-weight: 600;
+      }
+
+      .tagline {
+        font-family: "Oswald", "Arial Narrow", sans-serif;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--evergreen);
+      }
+
+      @media (max-width: 720px) {
+        nav {
+          display: none;
+        }
+
+        .info-block {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VB45312ZVK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VB45312ZVK');
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a href="index.html">Streamn Dad</a>
+        <nav>
+          <a href="index.html#guides">Guides</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-header">
+          <img src="assets/images/icon-software.png" alt="Software icon" />
+          <h1>Advanced Scene Switcher Config</h1>
+        </div>
+        <p>
+          A ready-to-import
+          <a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/">Advanced Scene Switcher</a>
+          configuration with 4 macros that automate penalty and power play overlays in OBS,
+          driven by <a href="software.html#streamn-scoreboard">Streamn Scoreboard</a> text files.
+        </p>
+      </section>
+
+      <section class="info-stack">
+        <article class="info-block">
+          <div class="icon"></div>
+          <div>
+            <h2>What it does</h2>
+            <p>
+              These macros watch the penalty text files that Streamn Scoreboard writes
+              and automatically show or hide penalty and power play scene items in OBS.
+            </p>
+            <ul>
+              <li>
+                <strong>Home Penalty Hide</strong> &mdash; When <code>home_penalty_numbers.txt</code>
+                is empty, hides the Home Penalty Group and Away PP items.
+              </li>
+              <li>
+                <strong>Away Penalty Hide</strong> &mdash; When <code>away_penalty_numbers.txt</code>
+                is empty, hides the Away Penalty Group and Home PP items.
+              </li>
+              <li>
+                <strong>Home Penalty Show</strong> &mdash; When <code>home_penalty_numbers.txt</code>
+                contains penalty numbers, waits 1 second then shows the Home Penalty Group and Away PP items.
+              </li>
+              <li>
+                <strong>Away Penalty Show</strong> &mdash; When <code>away_penalty_numbers.txt</code>
+                contains penalty numbers, waits 1 second then shows the Away Penalty Group and Home PP items.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="info-block">
+          <div class="icon"></div>
+          <div>
+            <h2>How to import</h2>
+            <p>
+              Import the config into Advanced Scene Switcher to get all 4 macros at once.
+              You will need to update the file paths and scene item names to match your setup.
+            </p>
+            <ol>
+              <li>Download the config file using the button below.</li>
+              <li>Open OBS and go to <strong>Tools &rarr; Advanced Scene Switcher</strong>.</li>
+              <li>Switch to the <strong>Macros</strong> tab.</li>
+              <li>Click the hamburger menu (three lines) at the bottom-left of the macro list and choose <strong>Import</strong>.</li>
+              <li>Select the downloaded JSON file and click <strong>Open</strong>.</li>
+              <li>
+                Update the file paths in each macro condition to point to your Streamn Scoreboard
+                output directory (e.g., <code>~/scoreboard/home_penalty_numbers.txt</code>).
+              </li>
+              <li>
+                Update the scene name (<code>Hockey</code>) and scene item names
+                (<code>Home Penalty Group</code>, <code>Away Penalty Group</code>,
+                <code>Home PP</code>, <code>Away PP</code>) to match your OBS scene setup.
+              </li>
+            </ol>
+
+            <a
+              class="download-btn"
+              href="examples/advanced-scene-switcher-penalty-macros.json"
+              download
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Config
+            </a>
+
+            <details class="json-preview">
+              <summary>View JSON</summary>
+              <pre><code id="json-code">Loading...</code></pre>
+            </details>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        <span class="tagline">Streamn Dad &bull; Minnesota</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="why-livestreaming.html">Why Livestreaming</a>
+          <a href="gear-basics.html">Gear</a>
+          <a href="software.html">Software</a>
+          <a href="workflow-sharing.html">Workflow</a>
+          <a href="story.html">Story</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <span>&copy; 2026 Streamn Dad. All rights reserved.</span>
+      </footer>
+    </div>
+
+    <script>
+      fetch('examples/advanced-scene-switcher-penalty-macros.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          document.getElementById('json-code').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(function () {
+          document.getElementById('json-code').textContent = 'Unable to load JSON preview.';
+        });
+    </script>
+  </body>
+</html>
