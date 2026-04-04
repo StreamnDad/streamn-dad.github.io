@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>reeln Debug Index</title>
+<style>
+body { font-family: monospace; margin: 2em; background: #1a1a2e; color: #e0e0e0; }
+h1 { color: #e94560; }
+h2 { color: #0f3460; background: #e0e0e0; padding: 4px 8px; margin-top: 2em; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+th, td { border: 1px solid #444; padding: 6px 10px; text-align: left; }
+th { background: #16213e; }
+pre { background: #16213e; padding: 1em; overflow-x: auto; white-space: pre-wrap; }
+a { color: #e94560; }
+.section { margin-bottom: 2em; }
+</style>
+</head>
+<body>
+<h1><img src='https://raw.githubusercontent.com/StreamnDad/reeln-cli/main/assets/logo.jpg' alt='reeln' style='height:48px;vertical-align:middle;margin-right:12px;border-radius:6px;'>reeln Debug Index</h1>
+<p>Game directory: <code>/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken</code></p>
+<p>Generated: 2026-03-23T20:31:34.840990+00:00</p>
+<p>This is example debug output from <a href='https://github.com/StreamnDad/reeln-cli'>reeln-cli</a>'s smart zoom rendering, powered by the <a href='https://github.com/StreamnDad/reeln-plugin-openai'>OpenAI plugin</a>. Read <a href='https://streamn-dad.medium.com/what-happened-when-i-let-ai-edit-my-youth-hockey-videos-d7ece1883905'>What happened when I let AI edit my youth hockey videos</a> for the full story.</p>
+<div class='section'>
+<h2>Smart Zoom Debug</h2>
+<p><strong>Zoom path:</strong> <a href='zoom/zoom_path.json'>zoom_path.json</a></p>
+<p><strong>Annotated frames</strong> (crosshair = detected center, green box = crop region):</p>
+<div style='display:flex;flex-wrap:wrap;gap:8px;'>
+<a href='zoom/annotated_0000.png'><img src='zoom/annotated_0000.png' style='max-width:320px;border:1px solid #444;' title='annotated_0000.png'></a>
+<a href='zoom/annotated_0001.png'><img src='zoom/annotated_0001.png' style='max-width:320px;border:1px solid #444;' title='annotated_0001.png'></a>
+<a href='zoom/annotated_0002.png'><img src='zoom/annotated_0002.png' style='max-width:320px;border:1px solid #444;' title='annotated_0002.png'></a>
+<a href='zoom/annotated_0003.png'><img src='zoom/annotated_0003.png' style='max-width:320px;border:1px solid #444;' title='annotated_0003.png'></a>
+<a href='zoom/annotated_0004.png'><img src='zoom/annotated_0004.png' style='max-width:320px;border:1px solid #444;' title='annotated_0004.png'></a>
+<a href='zoom/annotated_0005.png'><img src='zoom/annotated_0005.png' style='max-width:320px;border:1px solid #444;' title='annotated_0005.png'></a>
+<a href='zoom/annotated_0006.png'><img src='zoom/annotated_0006.png' style='max-width:320px;border:1px solid #444;' title='annotated_0006.png'></a>
+<a href='zoom/annotated_0007.png'><img src='zoom/annotated_0007.png' style='max-width:320px;border:1px solid #444;' title='annotated_0007.png'></a>
+<a href='zoom/annotated_0008.png'><img src='zoom/annotated_0008.png' style='max-width:320px;border:1px solid #444;' title='annotated_0008.png'></a>
+<a href='zoom/annotated_0009.png'><img src='zoom/annotated_0009.png' style='max-width:320px;border:1px solid #444;' title='annotated_0009.png'></a>
+<a href='zoom/annotated_0010.png'><img src='zoom/annotated_0010.png' style='max-width:320px;border:1px solid #444;' title='annotated_0010.png'></a>
+<a href='zoom/annotated_0011.png'><img src='zoom/annotated_0011.png' style='max-width:320px;border:1px solid #444;' title='annotated_0011.png'></a>
+<a href='zoom/annotated_0012.png'><img src='zoom/annotated_0012.png' style='max-width:320px;border:1px solid #444;' title='annotated_0012.png'></a>
+<a href='zoom/annotated_0013.png'><img src='zoom/annotated_0013.png' style='max-width:320px;border:1px solid #444;' title='annotated_0013.png'></a>
+<a href='zoom/annotated_0014.png'><img src='zoom/annotated_0014.png' style='max-width:320px;border:1px solid #444;' title='annotated_0014.png'></a>
+<a href='zoom/annotated_0015.png'><img src='zoom/annotated_0015.png' style='max-width:320px;border:1px solid #444;' title='annotated_0015.png'></a>
+</div>
+<p><strong>Extracted frames:</strong></p>
+<div style='display:flex;flex-wrap:wrap;gap:8px;'>
+<a href='zoom/frame_0000.png'><img src='zoom/frame_0000.png' style='max-width:320px;border:1px solid #444;' title='frame_0000.png'></a>
+<a href='zoom/frame_0001.png'><img src='zoom/frame_0001.png' style='max-width:320px;border:1px solid #444;' title='frame_0001.png'></a>
+<a href='zoom/frame_0002.png'><img src='zoom/frame_0002.png' style='max-width:320px;border:1px solid #444;' title='frame_0002.png'></a>
+<a href='zoom/frame_0003.png'><img src='zoom/frame_0003.png' style='max-width:320px;border:1px solid #444;' title='frame_0003.png'></a>
+<a href='zoom/frame_0004.png'><img src='zoom/frame_0004.png' style='max-width:320px;border:1px solid #444;' title='frame_0004.png'></a>
+<a href='zoom/frame_0005.png'><img src='zoom/frame_0005.png' style='max-width:320px;border:1px solid #444;' title='frame_0005.png'></a>
+<a href='zoom/frame_0006.png'><img src='zoom/frame_0006.png' style='max-width:320px;border:1px solid #444;' title='frame_0006.png'></a>
+<a href='zoom/frame_0007.png'><img src='zoom/frame_0007.png' style='max-width:320px;border:1px solid #444;' title='frame_0007.png'></a>
+<a href='zoom/frame_0008.png'><img src='zoom/frame_0008.png' style='max-width:320px;border:1px solid #444;' title='frame_0008.png'></a>
+<a href='zoom/frame_0009.png'><img src='zoom/frame_0009.png' style='max-width:320px;border:1px solid #444;' title='frame_0009.png'></a>
+<a href='zoom/frame_0010.png'><img src='zoom/frame_0010.png' style='max-width:320px;border:1px solid #444;' title='frame_0010.png'></a>
+<a href='zoom/frame_0011.png'><img src='zoom/frame_0011.png' style='max-width:320px;border:1px solid #444;' title='frame_0011.png'></a>
+<a href='zoom/frame_0012.png'><img src='zoom/frame_0012.png' style='max-width:320px;border:1px solid #444;' title='frame_0012.png'></a>
+<a href='zoom/frame_0013.png'><img src='zoom/frame_0013.png' style='max-width:320px;border:1px solid #444;' title='frame_0013.png'></a>
+<a href='zoom/frame_0014.png'><img src='zoom/frame_0014.png' style='max-width:320px;border:1px solid #444;' title='frame_0014.png'></a>
+<a href='zoom/frame_0015.png'><img src='zoom/frame_0015.png' style='max-width:320px;border:1px solid #444;' title='frame_0015.png'></a>
+</div>
+</div>
+<h2>Summary</h2>
+<table>
+<tr><th>#</th><th>Operation</th><th>Timestamp</th><th>Output</th></tr>
+<tr><td>1</td><td><a href='#render_short_1'>render_short</a></td><td>2026-03-23T20:31:34.837466+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>2</td><td><a href='#render_short_2'>render_short</a></td><td>2026-03-22T22:56:52.882268+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>3</td><td><a href='#render_short_3'>render_short</a></td><td>2026-03-22T21:39:13.879973+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>4</td><td><a href='#render_short_4'>render_short</a></td><td>2026-03-22T15:36:48.940667+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>5</td><td><a href='#render_short_5'>render_short</a></td><td>2026-03-21T17:34:34.025677+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>6</td><td><a href='#render_short_6'>render_short</a></td><td>2026-03-21T17:31:04.436883+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>7</td><td><a href='#render_short_7'>render_short</a></td><td>2026-03-21T17:26:41.469899+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>8</td><td><a href='#render_short_8'>render_short</a></td><td>2026-03-21T14:56:46.202884+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>9</td><td><a href='#render_short_9'>render_short</a></td><td>2026-03-21T14:50:30.782144+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>10</td><td><a href='#render_short_10'>render_short</a></td><td>2026-03-21T14:42:24.994307+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>11</td><td><a href='#render_short_11'>render_short</a></td><td>2026-03-21T14:26:55.844655+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>12</td><td><a href='#render_short_12'>render_short</a></td><td>2026-03-21T14:23:46.658623+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>13</td><td><a href='#render_short_13'>render_short</a></td><td>2026-03-20T16:15:19.517472+00:00</td><td><a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+<tr><td>14</td><td><a href='#render_short_14'>render_short</a></td><td>2026-03-20T15:07:40.953415+00:00</td><td><a href='../period-2/Replay_2026-03-15_13-51-57_short.mp4'>period-2/Replay_2026-03-15_13-51-57_short.mp4</a></td></tr>
+</table>
+<div class='section' id='render_short_1'>
+<h2>1. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-23T20:31:34.837466+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.642967</td></tr>
+<tr><td>fps</td><td>59.94005994005994</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: false
+}</pre>
+</div>
+<div class='section' id='render_short_2'>
+<h2>2. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-22T22:56:52.882268+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(-0.013222*t+0.8925)+gte(t,1.7017)*lt(t,2.836167)*(-0.026444*t+0.915)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.865)+gte(t,3.970633)*lt(t,5.1051)*(-0.061703*t+1.075)+gte(t,5.1051)*lt(t,5.672334)*(0.017629*t+0.67)+gte(t,5.672334)*lt(t,6.8068)*(-0.079332*t+1.22)+gte(t,6.8068)*lt(t,7.941267)*(0*t+0.68)+gte(t,7.941267)*lt(t,9.075734)*(0.035259*t+0.4)+gte(t,9.075734)*0.72)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1[_ov];[_ov]format=yuv420p,subtitles=f=/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/tmpaqs9h8qq.ass -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(-0.013222*t+0.8925)+gte(t,1.7017)*lt(t,2.836167)*(-0.026444*t+0.915)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.865)+gte(t,3.970633)*lt(t,5.1051)*(-0.061703*t+1.075)+gte(t,5.1051)*lt(t,5.672334)*(0.017629*t+0.67)+gte(t,5.672334)*lt(t,6.8068)*(-0.079332*t+1.22)+gte(t,6.8068)*lt(t,7.941267)*(0*t+0.68)+gte(t,7.941267)*lt(t,9.075734)*(0.035259*t+0.4)+gte(t,9.075734)*0.72)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1[_ov];[_ov]format=yuv420p,subtitles=f=/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/tmpaqs9h8qq.ass</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_3'>
+<h2>3. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-22T21:39:13.879973+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.9)+gte(t,1.7017)*lt(t,2.836167)*(-0.101369*t+1.0875)+gte(t,2.836167)*lt(t,3.970633)*(-0.017629*t+0.85)+gte(t,3.970633)*lt(t,5.1051)*(0*t+0.78)+gte(t,5.1051)*lt(t,5.672334)*(-0.008815*t+0.825)+gte(t,5.672334)*lt(t,6.8068)*(-0.101369*t+1.35)+gte(t,6.8068)*lt(t,7.941267)*(0.004407*t+0.63)+gte(t,7.941267)*lt(t,9.075734)*(0.057296*t+0.21)+gte(t,9.075734)*0.73)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1[_ov];[_ov]format=yuv420p,subtitles=f=/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/tmp_xvt26o7.ass -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.9)+gte(t,1.7017)*lt(t,2.836167)*(-0.101369*t+1.0875)+gte(t,2.836167)*lt(t,3.970633)*(-0.017629*t+0.85)+gte(t,3.970633)*lt(t,5.1051)*(0*t+0.78)+gte(t,5.1051)*lt(t,5.672334)*(-0.008815*t+0.825)+gte(t,5.672334)*lt(t,6.8068)*(-0.101369*t+1.35)+gte(t,6.8068)*lt(t,7.941267)*(0.004407*t+0.63)+gte(t,7.941267)*lt(t,9.075734)*(0.057296*t+0.21)+gte(t,9.075734)*0.73)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1[_ov];[_ov]format=yuv420p,subtitles=f=/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/tmp_xvt26o7.ass</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_4'>
+<h2>4. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-22T15:36:48.940667+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0*t+0.905)+gte(t,1.7017)*lt(t,2.836167)*(-0.101369*t+1.0775)+gte(t,2.836167)*lt(t,3.970633)*(0.035259*t+0.69)+gte(t,3.970633)*lt(t,5.1051)*(-0.017629*t+0.9)+gte(t,5.1051)*lt(t,5.672334)*(-0.070518*t+1.17)+gte(t,5.672334)*lt(t,6.8068)*(-0.070518*t+1.17)+gte(t,6.8068)*lt(t,7.941267)*(0*t+0.69)+gte(t,7.941267)*lt(t,9.075734)*(0.044074*t+0.34)+gte(t,9.075734)*0.74)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0*t+0.905)+gte(t,1.7017)*lt(t,2.836167)*(-0.101369*t+1.0775)+gte(t,2.836167)*lt(t,3.970633)*(0.035259*t+0.69)+gte(t,3.970633)*lt(t,5.1051)*(-0.017629*t+0.9)+gte(t,5.1051)*lt(t,5.672334)*(-0.070518*t+1.17)+gte(t,5.672334)*lt(t,6.8068)*(-0.070518*t+1.17)+gte(t,6.8068)*lt(t,7.941267)*(0*t+0.69)+gte(t,7.941267)*lt(t,9.075734)*(0.044074*t+0.34)+gte(t,9.075734)*0.74)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_5'>
+<h2>5. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T17:34:34.025677+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.875)+gte(t,1.7017)*lt(t,2.836167)*(-0.044074*t+0.965)+gte(t,2.836167)*lt(t,3.970633)*(-0.004407*t+0.8525)+gte(t,3.970633)*lt(t,5.1051)*(-0.136628*t+1.3775)+gte(t,5.1051)*lt(t,5.672334)*(0.105777*t+0.14)+gte(t,5.672334)*lt(t,6.8068)*(-0.052888*t+1.04)+gte(t,6.8068)*lt(t,7.941267)*(-0.017629*t+0.8)+gte(t,7.941267)*lt(t,9.075734)*(0.101369*t+-0.145)+gte(t,9.075734)*0.775)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1344:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.875)+gte(t,1.7017)*lt(t,2.836167)*(-0.044074*t+0.965)+gte(t,2.836167)*lt(t,3.970633)*(-0.004407*t+0.8525)+gte(t,3.970633)*lt(t,5.1051)*(-0.136628*t+1.3775)+gte(t,5.1051)*lt(t,5.672334)*(0.105777*t+0.14)+gte(t,5.672334)*lt(t,6.8068)*(-0.052888*t+1.04)+gte(t,6.8068)*lt(t,7.941267)*(-0.017629*t+0.8)+gte(t,7.941267)*lt(t,9.075734)*(0.101369*t+-0.145)+gte(t,9.075734)*0.775)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_6'>
+<h2>6. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T17:31:04.436883+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1920:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.030852*t+0.8675)+gte(t,1.7017)*lt(t,2.836167)*(-0.079332*t+1.055)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.855)+gte(t,3.970633)*lt(t,5.1051)*(-0.176294*t+1.52)+gte(t,5.1051)*lt(t,5.672334)*(0.220368*t+-0.505)+gte(t,5.672334)*lt(t,6.8068)*(-0.101369*t+1.32)+gte(t,6.8068)*lt(t,7.941267)*(0.044074*t+0.33)+gte(t,7.941267)*lt(t,9.075734)*(0.088147*t+-0.02)+gte(t,9.075734)*0.78)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:1920:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.030852*t+0.8675)+gte(t,1.7017)*lt(t,2.836167)*(-0.079332*t+1.055)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.855)+gte(t,3.970633)*lt(t,5.1051)*(-0.176294*t+1.52)+gte(t,5.1051)*lt(t,5.672334)*(0.220368*t+-0.505)+gte(t,5.672334)*lt(t,6.8068)*(-0.101369*t+1.32)+gte(t,6.8068)*lt(t,7.941267)*(0.044074*t+0.33)+gte(t,7.941267)*lt(t,9.075734)*(0.088147*t+-0.02)+gte(t,9.075734)*0.78)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.0,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_7'>
+<h2>7. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T17:26:41.469899+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:3264:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.855)+gte(t,1.7017)*lt(t,2.836167)*(-0.114591*t+1.065)+gte(t,2.836167)*lt(t,3.970633)*(0.044074*t+0.615)+gte(t,3.970633)*lt(t,5.1051)*(-0.096962*t+1.175)+gte(t,5.1051)*lt(t,5.672334)*(0.141035*t+-0.04)+gte(t,5.672334)*lt(t,6.8068)*(-0.123406*t+1.46)+gte(t,6.8068)*lt(t,7.941267)*(0.017629*t+0.5)+gte(t,7.941267)*lt(t,9.075734)*(0.105777*t+-0.2)+gte(t,9.075734)*0.76)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=59.9401[_bg];[0:v]scale=-2:3264:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;min(0,max(W-w,W/2-(lt(t,1.7017)*(0.008815*t+0.855)+gte(t,1.7017)*lt(t,2.836167)*(-0.114591*t+1.065)+gte(t,2.836167)*lt(t,3.970633)*(0.044074*t+0.615)+gte(t,3.970633)*lt(t,5.1051)*(-0.096962*t+1.175)+gte(t,5.1051)*lt(t,5.672334)*(0.141035*t+-0.04)+gte(t,5.672334)*lt(t,6.8068)*(-0.123406*t+1.46)+gte(t,6.8068)*lt(t,7.941267)*(0.017629*t+0.5)+gte(t,7.941267)*lt(t,9.075734)*(0.105777*t+-0.2)+gte(t,9.075734)*0.76)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.659644</td></tr>
+<tr><td>fps</td><td>59.9401</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_8'>
+<h2>8. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T14:56:46.202884+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.013222*t+0.8625)+gte(t,1.7017)*lt(t,2.836167)*(-0.092555*t+1.0425)+gte(t,2.836167)*lt(t,3.970633)*(-0.013222*t+0.8175)+gte(t,3.970633)*lt(t,5.1051)*(0.013222*t+0.7125)+gte(t,5.1051)*lt(t,5.672334)*(-0.035259*t+0.96)+gte(t,5.672334)*lt(t,6.8068)*(-0.088147*t+1.26)+gte(t,6.8068)*lt(t,7.941267)*(-0.004407*t+0.69)+gte(t,7.941267)*lt(t,9.075734)*(0.057296*t+0.2)+gte(t,9.075734)*0.72)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.013222*t+0.8625)+gte(t,1.7017)*lt(t,2.836167)*(-0.092555*t+1.0425)+gte(t,2.836167)*lt(t,3.970633)*(-0.013222*t+0.8175)+gte(t,3.970633)*lt(t,5.1051)*(0.013222*t+0.7125)+gte(t,5.1051)*lt(t,5.672334)*(-0.035259*t+0.96)+gte(t,5.672334)*lt(t,6.8068)*(-0.088147*t+1.26)+gte(t,6.8068)*lt(t,7.941267)*(-0.004407*t+0.69)+gte(t,7.941267)*lt(t,9.075734)*(0.057296*t+0.2)+gte(t,9.075734)*0.72)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.666667</td></tr>
+<tr><td>fps</td><td>30.0</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_9'>
+<h2>9. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T14:50:30.782144+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.022037*t+0.8475)+gte(t,1.7017)*lt(t,2.836167)*(-0.08374*t+1.0275)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.815)+gte(t,3.970633)*lt(t,5.1051)*(0.004407*t+0.7625)+gte(t,5.1051)*lt(t,5.672334)*(-0.061703*t+1.1)+gte(t,5.672334)*lt(t,6.8068)*(-0.044074*t+1)+gte(t,6.8068)*lt(t,7.941267)*(-0.030852*t+0.91)+gte(t,7.941267)*lt(t,9.075734)*(0.061703*t+0.175)+gte(t,9.075734)*0.735)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.022037*t+0.8475)+gte(t,1.7017)*lt(t,2.836167)*(-0.08374*t+1.0275)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.815)+gte(t,3.970633)*lt(t,5.1051)*(0.004407*t+0.7625)+gte(t,5.1051)*lt(t,5.672334)*(-0.061703*t+1.1)+gte(t,5.672334)*lt(t,6.8068)*(-0.044074*t+1)+gte(t,6.8068)*lt(t,7.941267)*(-0.030852*t+0.91)+gte(t,7.941267)*lt(t,9.075734)*(0.061703*t+0.175)+gte(t,9.075734)*0.735)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.666667</td></tr>
+<tr><td>fps</td><td>30.0</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_10'>
+<h2>10. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T14:42:24.994307+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.237997*t+0.385)+gte(t,1.7017)*lt(t,2.836167)*(-0.052888*t+0.88)+gte(t,2.836167)*lt(t,3.970633)*(0.052888*t+0.58)+gte(t,3.970633)*lt(t,5.1051)*(0*t+0.79)+gte(t,5.1051)*lt(t,5.672334)*(-0.088147*t+1.24)+gte(t,5.672334)*lt(t,6.8068)*(-0.061703*t+1.09)+gte(t,6.8068)*lt(t,7.941267)*(-0.041429*t+0.952)+gte(t,7.941267)*lt(t,9.075734)*(0.094317*t+-0.126)+gte(t,9.075734)*0.73)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;max(0,min(W-w,W/2-(lt(t,1.7017)*(0.237997*t+0.385)+gte(t,1.7017)*lt(t,2.836167)*(-0.052888*t+0.88)+gte(t,2.836167)*lt(t,3.970633)*(0.052888*t+0.58)+gte(t,3.970633)*lt(t,5.1051)*(0*t+0.79)+gte(t,5.1051)*lt(t,5.672334)*(-0.088147*t+1.24)+gte(t,5.672334)*lt(t,6.8068)*(-0.061703*t+1.09)+gte(t,6.8068)*lt(t,7.941267)*(-0.041429*t+0.952)+gte(t,7.941267)*lt(t,9.075734)*(0.094317*t+-0.126)+gte(t,9.075734)*0.73)*w))&#x27;:y=&#x27;(H-h)/2&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.666667</td></tr>
+<tr><td>fps</td><td>30.0</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_11'>
+<h2>11. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T14:26:55.844655+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;(W-w)/2&#x27;:y=&#x27;max(0,min(H-h,H/2-(lt(t,1.7017)*(0.044074*t+0.595)+gte(t,1.7017)*lt(t,2.836167)*(-0.290886*t+1.165)+gte(t,2.836167)*lt(t,3.970633)*(0.088147*t+0.09)+gte(t,3.970633)*lt(t,5.1051)*(0.16748*t+-0.225)+gte(t,5.1051)*lt(t,5.672334)*(-0.423106*t+2.79)+gte(t,5.672334)*lt(t,6.8068)*(0.132221*t+-0.36)+gte(t,6.8068)*lt(t,7.941267)*(0.046718*t+0.222)+gte(t,7.941267)*lt(t,9.075734)*(-0.020274*t+0.754)+gte(t,9.075734)*0.57)*h))&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=1836:-2:flags=lanczos,crop=w=&#x27;min(iw,1080)&#x27;:h=&#x27;min(ih,1920)&#x27;:x=&#x27;(iw-min(iw,1080))/2&#x27;:y=&#x27;(ih-min(ih,1920))/2&#x27;[_fg];[_bg][_fg]overlay=x=&#x27;(W-w)/2&#x27;:y=&#x27;max(0,min(H-h,H/2-(lt(t,1.7017)*(0.044074*t+0.595)+gte(t,1.7017)*lt(t,2.836167)*(-0.290886*t+1.165)+gte(t,2.836167)*lt(t,3.970633)*(0.088147*t+0.09)+gte(t,3.970633)*lt(t,5.1051)*(0.16748*t+-0.225)+gte(t,5.1051)*lt(t,5.672334)*(-0.423106*t+2.79)+gte(t,5.672334)*lt(t,6.8068)*(0.132221*t+-0.36)+gte(t,6.8068)*lt(t,7.941267)*(0.046718*t+0.222)+gte(t,7.941267)*lt(t,9.075734)*(-0.020274*t+0.754)+gte(t,9.075734)*0.57)*h))&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.666667</td></tr>
+<tr><td>fps</td><td>30.0</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 1.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_12'>
+<h2>12. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-21T14:23:46.658623+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=756:-2:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;(W-w)/2&#x27;:y=&#x27;max(0,min(H-h,H/2-(lt(t,1.7017)*(-0.026444*t+0.665)+gte(t,1.7017)*lt(t,2.836167)*(-0.202738*t+0.965)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.415)+gte(t,3.970633)*lt(t,5.1051)*(0.193924*t+-0.39)+gte(t,5.1051)*lt(t,5.672334)*(-0.423106*t+2.76)+gte(t,5.672334)*lt(t,6.8068)*(0.180702*t+-0.665)+gte(t,6.8068)*lt(t,7.941267)*(0.014985*t+0.463)+gte(t,7.941267)*lt(t,9.075734)*(-0.001763*t+0.596)+gte(t,9.075734)*0.58)*h))&#x27;:eval=frame:shortest=1 -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>color=c=black:s=1080x1920:r=30[_bg];[0:v]scale=756:-2:flags=lanczos[_fg];[_bg][_fg]overlay=x=&#x27;(W-w)/2&#x27;:y=&#x27;max(0,min(H-h,H/2-(lt(t,1.7017)*(-0.026444*t+0.665)+gte(t,1.7017)*lt(t,2.836167)*(-0.202738*t+0.965)+gte(t,2.836167)*lt(t,3.970633)*(-0.008815*t+0.415)+gte(t,3.970633)*lt(t,5.1051)*(0.193924*t+-0.39)+gte(t,5.1051)*lt(t,5.672334)*(-0.423106*t+2.76)+gte(t,5.672334)*lt(t,6.8068)*(0.180702*t+-0.665)+gte(t,6.8068)*lt(t,7.941267)*(0.014985*t+0.463)+gte(t,7.941267)*lt(t,9.075734)*(-0.001763*t+0.596)+gte(t,9.075734)*0.58)*h))&#x27;:eval=frame:shortest=1</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.666667</td></tr>
+<tr><td>fps</td><td>30.0</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: true,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+<div class='section' id='render_short_13'>
+<h2>13. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-20T16:15:19.517472+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4'>period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.642967</td></tr>
+<tr><td>fps</td><td>59.94005994005994</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;pad&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;scale&quot;: 0.7,
+  &quot;smart&quot;: false
+}</pre>
+</div>
+<div class='section' id='render_short_14'>
+<h2>14. render_short</h2>
+<p><strong>Timestamp:</strong> 2026-03-20T15:07:40.953415+00:00</p>
+<p><strong>FFmpeg command:</strong></p>
+<pre>/opt/homebrew/bin/ffmpeg -y -v error -i /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4 -filter_complex scale=-2:1920:flags=lanczos,crop=w=&#x27;ih*1080/1920&#x27;:h=&#x27;ih&#x27;:x=&#x27;max(0,min(iw-ih*1080/1920,(if(lt(t,1.134466705882353),0.68+-0.06000000000000005*(t-0.5672333529411765)/0.5672333529411765,if(lt(t,1.7017000588235294),0.62+0.20999999999999996*(t-1.134466705882353)/0.5672333529411764,if(lt(t,2.268933411764706),0.83+-0.25*(t-1.7017000588235294)/0.5672333529411766,if(lt(t,2.8361667647058826),0.58+0.16000000000000003*(t-2.268933411764706)/0.5672333529411766,if(lt(t,3.4034001176470587),0.74+0.050000000000000044*(t-2.8361667647058826)/0.5672333529411762,if(lt(t,3.9706334705882353),0.79+0.029999999999999916*(t-3.4034001176470587)/0.5672333529411766,if(lt(t,4.537866823529412),0.82+-0.039999999999999925*(t-3.9706334705882353)/0.5672333529411766,if(lt(t,5.105100176470589),0.78+-0.010000000000000009*(t-4.537866823529412)/0.5672333529411766,if(lt(t,5.672333529411765),0.77+0.010000000000000009*(t-5.105100176470589)/0.5672333529411766,if(lt(t,6.239566882352942),0.78+-0.13*(t-5.672333529411765)/0.5672333529411766,if(lt(t,6.8068002352941175),0.65+0.010000000000000009*(t-6.239566882352942)/0.5672333529411757,if(lt(t,7.374033588235294),0.66+-0.020000000000000018*(t-6.8068002352941175)/0.5672333529411766,if(lt(t,7.941266941176471),0.64+0.0*(t-7.374033588235294)/0.5672333529411766,if(lt(t,8.508500294117647),0.64+0.06599999999999995*(t-7.941266941176471)/0.5672333529411766,if(lt(t,9.075733647058824),0.706+-0.0010000000000000009*(t-8.508500294117647)/0.5672333529411766,0.705))))))))))))))))*(iw-ih*1080/1920)))&#x27;:y=&#x27;max(0,min(ih-ih,(if(lt(t,1.134466705882353),0.62+0.040000000000000036*(t-0.5672333529411765)/0.5672333529411765,if(lt(t,1.7017000588235294),0.66+-0.020000000000000018*(t-1.134466705882353)/0.5672333529411764,if(lt(t,2.268933411764706),0.64+-0.040000000000000036*(t-1.7017000588235294)/0.5672333529411766,if(lt(t,2.8361667647058826),0.6+-0.21999999999999997*(t-2.268933411764706)/0.5672333529411766,if(lt(t,3.4034001176470587),0.38+0.0*(t-2.8361667647058826)/0.5672333529411762,if(lt(t,3.9706334705882353),0.38+-0.06*(t-3.4034001176470587)/0.5672333529411766,if(lt(t,4.537866823529412),0.32+0.08000000000000002*(t-3.9706334705882353)/0.5672333529411766,if(lt(t,5.105100176470589),0.4+0.13*(t-4.537866823529412)/0.5672333529411766,if(lt(t,5.672333529411765),0.53+-0.06000000000000005*(t-5.105100176470589)/0.5672333529411766,if(lt(t,6.239566882352942),0.47+0.030000000000000027*(t-5.672333529411765)/0.5672333529411766,if(lt(t,6.8068002352941175),0.5+0.07999999999999996*(t-6.239566882352942)/0.5672333529411757,if(lt(t,7.374033588235294),0.58+0.010000000000000009*(t-6.8068002352941175)/0.5672333529411766,if(lt(t,7.941266941176471),0.59+0.010000000000000009*(t-7.374033588235294)/0.5672333529411766,if(lt(t,8.508500294117647),0.6+-0.0050000000000000044*(t-7.941266941176471)/0.5672333529411766,if(lt(t,9.075733647058824),0.595+-0.020000000000000018*(t-8.508500294117647)/0.5672333529411766,0.575))))))))))))))))*(ih-ih)))&#x27;,scale=1080:1920:flags=lanczos -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 128k /Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57_short.mp4</pre>
+<p><strong>Filter complex:</strong></p>
+<pre>scale=-2:1920:flags=lanczos,crop=w=&#x27;ih*1080/1920&#x27;:h=&#x27;ih&#x27;:x=&#x27;max(0,min(iw-ih*1080/1920,(if(lt(t,1.134466705882353),0.68+-0.06000000000000005*(t-0.5672333529411765)/0.5672333529411765,if(lt(t,1.7017000588235294),0.62+0.20999999999999996*(t-1.134466705882353)/0.5672333529411764,if(lt(t,2.268933411764706),0.83+-0.25*(t-1.7017000588235294)/0.5672333529411766,if(lt(t,2.8361667647058826),0.58+0.16000000000000003*(t-2.268933411764706)/0.5672333529411766,if(lt(t,3.4034001176470587),0.74+0.050000000000000044*(t-2.8361667647058826)/0.5672333529411762,if(lt(t,3.9706334705882353),0.79+0.029999999999999916*(t-3.4034001176470587)/0.5672333529411766,if(lt(t,4.537866823529412),0.82+-0.039999999999999925*(t-3.9706334705882353)/0.5672333529411766,if(lt(t,5.105100176470589),0.78+-0.010000000000000009*(t-4.537866823529412)/0.5672333529411766,if(lt(t,5.672333529411765),0.77+0.010000000000000009*(t-5.105100176470589)/0.5672333529411766,if(lt(t,6.239566882352942),0.78+-0.13*(t-5.672333529411765)/0.5672333529411766,if(lt(t,6.8068002352941175),0.65+0.010000000000000009*(t-6.239566882352942)/0.5672333529411757,if(lt(t,7.374033588235294),0.66+-0.020000000000000018*(t-6.8068002352941175)/0.5672333529411766,if(lt(t,7.941266941176471),0.64+0.0*(t-7.374033588235294)/0.5672333529411766,if(lt(t,8.508500294117647),0.64+0.06599999999999995*(t-7.941266941176471)/0.5672333529411766,if(lt(t,9.075733647058824),0.706+-0.0010000000000000009*(t-8.508500294117647)/0.5672333529411766,0.705))))))))))))))))*(iw-ih*1080/1920)))&#x27;:y=&#x27;max(0,min(ih-ih,(if(lt(t,1.134466705882353),0.62+0.040000000000000036*(t-0.5672333529411765)/0.5672333529411765,if(lt(t,1.7017000588235294),0.66+-0.020000000000000018*(t-1.134466705882353)/0.5672333529411764,if(lt(t,2.268933411764706),0.64+-0.040000000000000036*(t-1.7017000588235294)/0.5672333529411766,if(lt(t,2.8361667647058826),0.6+-0.21999999999999997*(t-2.268933411764706)/0.5672333529411766,if(lt(t,3.4034001176470587),0.38+0.0*(t-2.8361667647058826)/0.5672333529411762,if(lt(t,3.9706334705882353),0.38+-0.06*(t-3.4034001176470587)/0.5672333529411766,if(lt(t,4.537866823529412),0.32+0.08000000000000002*(t-3.9706334705882353)/0.5672333529411766,if(lt(t,5.105100176470589),0.4+0.13*(t-4.537866823529412)/0.5672333529411766,if(lt(t,5.672333529411765),0.53+-0.06000000000000005*(t-5.105100176470589)/0.5672333529411766,if(lt(t,6.239566882352942),0.47+0.030000000000000027*(t-5.672333529411765)/0.5672333529411766,if(lt(t,6.8068002352941175),0.5+0.07999999999999996*(t-6.239566882352942)/0.5672333529411757,if(lt(t,7.374033588235294),0.58+0.010000000000000009*(t-6.8068002352941175)/0.5672333529411766,if(lt(t,7.941266941176471),0.59+0.010000000000000009*(t-7.374033588235294)/0.5672333529411766,if(lt(t,8.508500294117647),0.6+-0.0050000000000000044*(t-7.941266941176471)/0.5672333529411766,if(lt(t,9.075733647058824),0.595+-0.020000000000000018*(t-8.508500294117647)/0.5672333529411766,0.575))))))))))))))))*(ih-ih)))&#x27;,scale=1080:1920:flags=lanczos</pre>
+<p><strong>Input files:</strong></p>
+<ul>
+<li><a href='../period-2/Replay_2026-03-15_13-51-57.mp4'>period-2/Replay_2026-03-15_13-51-57.mp4</a></li>
+</ul>
+<p><strong>Output:</strong> <a href='../period-2/Replay_2026-03-15_13-51-57_short.mp4'>period-2/Replay_2026-03-15_13-51-57_short.mp4</a></p>
+<p><strong>Input metadata:</strong></p>
+<table>
+<tr><th>File</th><th>Duration</th><th>FPS</th><th>Resolution</th></tr>
+<tr><td>Replay_2026-03-15_13-51-57.mp4</td><td>9.642967</td><td>59.94005994005994</td><td>1920x1080</td></tr>
+</table>
+<p><strong>Output metadata:</strong></p>
+<table>
+<tr><th>Key</th><th>Value</th></tr>
+<tr><td>file</td><td>Replay_2026-03-15_13-51-57_short.mp4</td></tr>
+<tr><td>duration</td><td>9.642967</td></tr>
+<tr><td>fps</td><td>59.94005994005994</td></tr>
+<tr><td>resolution</td><td>1080x1920</td></tr>
+</table>
+<p><strong>Extra:</strong></p>
+<pre>{
+  &quot;crop_mode&quot;: &quot;smart&quot;,
+  &quot;size&quot;: &quot;1080x1920&quot;,
+  &quot;speed&quot;: 1.0,
+  &quot;smart_zoom_points&quot;: 16
+}</pre>
+</div>
+</body>
+</html>

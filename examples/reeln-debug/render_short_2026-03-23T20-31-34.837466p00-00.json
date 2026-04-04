@@ -1,0 +1,51 @@
+{
+  "operation": "render_short",
+  "timestamp": "2026-03-23T20:31:34.837466+00:00",
+  "ffmpeg_command": [
+    "/opt/homebrew/bin/ffmpeg",
+    "-y",
+    "-v",
+    "error",
+    "-i",
+    "/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/Replay_2026-03-15_13-51-57.mp4",
+    "-filter_complex",
+    "scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "18",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "128k",
+    "/Users/streamndad/Movies/2026-03-15_ducks_vs_kraken/period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4"
+  ],
+  "filter_complex": "scale=756:-2:flags=lanczos,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black",
+  "input_files": [
+    "period-2/Replay_2026-03-15_13-51-57.mp4"
+  ],
+  "output_file": "period-2/shorts/Replay_2026-03-15_13-51-57_short.mp4",
+  "input_metadata": [
+    {
+      "file": "Replay_2026-03-15_13-51-57.mp4",
+      "duration": 9.642967,
+      "fps": 59.94005994005994,
+      "resolution": "1920x1080"
+    }
+  ],
+  "output_metadata": {
+    "file": "Replay_2026-03-15_13-51-57_short.mp4",
+    "duration": 9.642967,
+    "fps": 59.94005994005994,
+    "resolution": "1080x1920"
+  },
+  "extra": {
+    "crop_mode": "pad",
+    "size": "1080x1920",
+    "speed": 1.0,
+    "scale": 0.7,
+    "smart": false
+  }
+}
